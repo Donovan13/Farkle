@@ -13,6 +13,7 @@
 		09A85FD51CA473FB00C7F3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD31CA473FB00C7F3C8 /* Main.storyboard */; };
 		09A85FD71CA473FB00C7F3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */; };
 		09A85FDA1CA473FB00C7F3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */; };
+		09A85FE31CA4755B00C7F3C8 /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A85FE21CA4755B00C7F3C8 /* DieLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A85FD91CA473FB00C7F3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A85FDB1CA473FB00C7F3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A85FE11CA4755B00C7F3C8 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		09A85FE21CA4755B00C7F3C8 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				09A85FD01CA473FB00C7F3C8 /* ViewController.h */,
 				09A85FD11CA473FB00C7F3C8 /* ViewController.m */,
 				09A85FD31CA473FB00C7F3C8 /* Main.storyboard */,
+				09A85FE11CA4755B00C7F3C8 /* DieLabel.h */,
+				09A85FE21CA4755B00C7F3C8 /* DieLabel.m */,
 				09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */,
 				09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */,
 				09A85FDB1CA473FB00C7F3C8 /* Info.plist */,
@@ -153,6 +158,7 @@
 				09A85FD21CA473FB00C7F3C8 /* ViewController.m in Sources */,
 				09A85FCF1CA473FB00C7F3C8 /* AppDelegate.m in Sources */,
 				09A85FCC1CA473FB00C7F3C8 /* main.m in Sources */,
+				09A85FE31CA4755B00C7F3C8 /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
