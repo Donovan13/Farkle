@@ -11,6 +11,7 @@
 
 @interface DieLabel() <UIGestureRecognizerDelegate>
 
+
 @end
 
 @implementation DieLabel
@@ -26,9 +27,12 @@
                                                                               action:@selector(panTarget:)];
 
         self.gestureRecognizers = @[tap, pan];
+        
+    //  for (type                  thing            in this group of things
         for (UIGestureRecognizer *gestureRecognizer in self.gestureRecognizers) {
             gestureRecognizer.delegate = self;
         }
+        
     }
     return self;
 }
@@ -42,7 +46,7 @@
 }
 
 -(void) dieRoll {
-    int i = arc4random_uniform(5);
+    int i = arc4random_uniform(6);
     self.text = [NSString stringWithFormat:@"%i", i + 1];
     NSLog(@"%i", i + 1);
 }

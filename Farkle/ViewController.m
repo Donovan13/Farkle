@@ -9,9 +9,11 @@
 #import "ViewController.h"
 #import "DieLabel.h"
 
-@interface ViewController ()
+@interface ViewController ()<DieLabelDelegate>
 
 @property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;
+@property NSMutableArray* dice;
+
 
 @end
 
