@@ -8,48 +8,38 @@
 
 #import "DieLabel.h"
 
-
 @interface DieLabel() <UIGestureRecognizerDelegate>
-
-
 @end
 
 @implementation DieLabel
 
 - (id) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
-
     if (self) {
         self.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                              action:@selector(tapTarget:)];
-        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                                              action:@selector(panTarget:)];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTarget:)];
+        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panTarget:)];
 
         self.gestureRecognizers = @[tap, pan];
-        
-    //  for (type                  thing            in this group of things
         for (UIGestureRecognizer *gestureRecognizer in self.gestureRecognizers) {
             gestureRecognizer.delegate = self;
         }
-        
     }
     return self;
 }
 
 -(void) tapTarget:(UIGestureRecognizer *)gestureRecognizer {
-    NSLog(@"did receive tap");
+    [self.delegate didSelectDie:self];
+    self.backgroundColor = [UIColor blueColor];
+    [self removeGestureRecognizer:gestureRecognizer];
 }
 
 -(void) panTarget:(UIGestureRecognizer *)gestureRecognizer {
-    NSLog(@"did receive pan");
 }
 
 -(void) dieRoll {
     int i = arc4random_uniform(6);
     self.text = [NSString stringWithFormat:@"%i", i + 1];
-    NSLog(@"%i", i + 1);
 }
-
 
 @end

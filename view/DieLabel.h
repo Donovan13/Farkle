@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DieLabel;
 
 @protocol DieLabelDelegate <NSObject>
-
+-(void) didSelectDie:(DieLabel *) dieLabel;
+-(void) moveDieToHeldArea:(DieLabel *) dieLabel;
 @end
-
 
 @interface DieLabel : UILabel
 @property (nonatomic, assign) id<DieLabelDelegate>delegate;
