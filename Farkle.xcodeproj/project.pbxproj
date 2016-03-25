@@ -45,7 +45,10 @@
 		09A85FBE1CA473FB00C7F3C8 = {
 			isa = PBXGroup;
 			children = (
-				09A85FC91CA473FB00C7F3C8 /* Farkle */,
+				684FEF301CA5AF4D00E27DD0 /* model */,
+				684FEF321CA5AF5900E27DD0 /* controller */,
+				684FEF311CA5AF5400E27DD0 /* view */,
+				684FEF331CA5AF5E00E27DD0 /* support */,
 				09A85FC81CA473FB00C7F3C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,30 +61,43 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09A85FC91CA473FB00C7F3C8 /* Farkle */ = {
+		684FEF301CA5AF4D00E27DD0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		684FEF311CA5AF5400E27DD0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				09A85FE11CA4755B00C7F3C8 /* DieLabel.h */,
+				09A85FE21CA4755B00C7F3C8 /* DieLabel.m */,
+				09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */,
+				09A85FD31CA473FB00C7F3C8 /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		684FEF321CA5AF5900E27DD0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				09A85FD01CA473FB00C7F3C8 /* ViewController.h */,
+				09A85FD11CA473FB00C7F3C8 /* ViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		684FEF331CA5AF5E00E27DD0 /* support */ = {
 			isa = PBXGroup;
 			children = (
 				09A85FCD1CA473FB00C7F3C8 /* AppDelegate.h */,
 				09A85FCE1CA473FB00C7F3C8 /* AppDelegate.m */,
-				09A85FD01CA473FB00C7F3C8 /* ViewController.h */,
-				09A85FD11CA473FB00C7F3C8 /* ViewController.m */,
-				09A85FD31CA473FB00C7F3C8 /* Main.storyboard */,
-				09A85FE11CA4755B00C7F3C8 /* DieLabel.h */,
-				09A85FE21CA4755B00C7F3C8 /* DieLabel.m */,
 				09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */,
-				09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */,
 				09A85FDB1CA473FB00C7F3C8 /* Info.plist */,
-				09A85FCA1CA473FB00C7F3C8 /* Supporting Files */,
-			);
-			path = Farkle;
-			sourceTree = "<group>";
-		};
-		09A85FCA1CA473FB00C7F3C8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				09A85FCB1CA473FB00C7F3C8 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +131,7 @@
 				TargetAttributes = {
 					09A85FC61CA473FB00C7F3C8 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 4DLHFFRA86;
+						DevelopmentTeam = 66B8D6X2BX;
 					};
 				};
 			};
@@ -171,6 +187,7 @@
 				09A85FD41CA473FB00C7F3C8 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */ = {
@@ -179,6 +196,7 @@
 				09A85FD91CA473FB00C7F3C8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -268,7 +286,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Farkle/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Donovan.Farkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,7 +298,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Farkle/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Donovan.Farkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,6 +325,7 @@
 				09A85FE01CA473FB00C7F3C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

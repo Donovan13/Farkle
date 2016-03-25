@@ -13,14 +13,15 @@
 
 @property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;
 @property NSMutableArray* dice;
-
-
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    for (DieLabel *dieLabel in self.dieLabels) {
+        dieLabel.delegate = self;
+    }
 
 }
 
