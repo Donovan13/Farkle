@@ -14,6 +14,16 @@
 		09A85FD71CA473FB00C7F3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */; };
 		09A85FDA1CA473FB00C7F3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */; };
 		09A85FE31CA4755B00C7F3C8 /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A85FE21CA4755B00C7F3C8 /* DieLabel.m */; };
+		68AA66571CA712100010D421 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66561CA712100010D421 /* Player.m */; };
+		68AA665A1CA7161A0010D421 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66591CA7161A0010D421 /* Game.m */; };
+		68AA66611CA727540010D421 /* Turn.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66601CA727540010D421 /* Turn.m */; };
+		68AA66671CA732D70010D421 /* Roll5State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66661CA732D70010D421 /* Roll5State.m */; };
+		68AA666D1CA734370010D421 /* Roll4State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA666C1CA734370010D421 /* Roll4State.m */; };
+		68AA66701CA734A70010D421 /* Roll3State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA666F1CA734A70010D421 /* Roll3State.m */; };
+		68AA66731CA734D30010D421 /* Roll2State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66721CA734D30010D421 /* Roll2State.m */; };
+		68AA66761CA734F10010D421 /* Roll1State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66751CA734F10010D421 /* Roll1State.m */; };
+		68AA66791CA7357E0010D421 /* SingleDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66781CA7357E0010D421 /* SingleDice.m */; };
+		68AA667C1CA739590010D421 /* RollXState.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA667B1CA739590010D421 /* RollXState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +39,27 @@
 		09A85FDB1CA473FB00C7F3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A85FE11CA4755B00C7F3C8 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
 		09A85FE21CA4755B00C7F3C8 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
+		68AA66551CA712100010D421 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		68AA66561CA712100010D421 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		68AA66581CA7161A0010D421 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		68AA66591CA7161A0010D421 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		68AA665F1CA727540010D421 /* Turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turn.h; sourceTree = "<group>"; };
+		68AA66601CA727540010D421 /* Turn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turn.m; sourceTree = "<group>"; };
+		68AA66651CA732D70010D421 /* Roll5State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roll5State.h; sourceTree = "<group>"; };
+		68AA66661CA732D70010D421 /* Roll5State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roll5State.m; sourceTree = "<group>"; };
+		68AA66681CA733180010D421 /* TurnState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnState.h; sourceTree = "<group>"; };
+		68AA666B1CA734370010D421 /* Roll4State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roll4State.h; sourceTree = "<group>"; };
+		68AA666C1CA734370010D421 /* Roll4State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roll4State.m; sourceTree = "<group>"; };
+		68AA666E1CA734A70010D421 /* Roll3State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roll3State.h; sourceTree = "<group>"; };
+		68AA666F1CA734A70010D421 /* Roll3State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roll3State.m; sourceTree = "<group>"; };
+		68AA66711CA734D30010D421 /* Roll2State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roll2State.h; sourceTree = "<group>"; };
+		68AA66721CA734D30010D421 /* Roll2State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roll2State.m; sourceTree = "<group>"; };
+		68AA66741CA734F10010D421 /* Roll1State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roll1State.h; sourceTree = "<group>"; };
+		68AA66751CA734F10010D421 /* Roll1State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roll1State.m; sourceTree = "<group>"; };
+		68AA66771CA7357E0010D421 /* SingleDice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleDice.h; sourceTree = "<group>"; };
+		68AA66781CA7357E0010D421 /* SingleDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleDice.m; sourceTree = "<group>"; };
+		68AA667A1CA739590010D421 /* RollXState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollXState.h; sourceTree = "<group>"; };
+		68AA667B1CA739590010D421 /* RollXState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollXState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,11 +76,12 @@
 		09A85FBE1CA473FB00C7F3C8 = {
 			isa = PBXGroup;
 			children = (
-				684FEF301CA5AF4D00E27DD0 /* model */,
-				684FEF321CA5AF5900E27DD0 /* controller */,
-				684FEF311CA5AF5400E27DD0 /* view */,
-				684FEF331CA5AF5E00E27DD0 /* support */,
 				09A85FC81CA473FB00C7F3C8 /* Products */,
+				684FEF301CA5AF4D00E27DD0 /* model */,
+				68AA665E1CA7273F0010D421 /* Turn */,
+				684FEF321CA5AF5900E27DD0 /* controller */,
+				684FEF331CA5AF5E00E27DD0 /* support */,
+				684FEF311CA5AF5400E27DD0 /* view */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +96,10 @@
 		684FEF301CA5AF4D00E27DD0 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				68AA66581CA7161A0010D421 /* Game.h */,
+				68AA66591CA7161A0010D421 /* Game.m */,
+				68AA66551CA712100010D421 /* Player.h */,
+				68AA66561CA712100010D421 /* Player.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -98,6 +134,30 @@
 				09A85FCB1CA473FB00C7F3C8 /* main.m */,
 			);
 			path = support;
+			sourceTree = "<group>";
+		};
+		68AA665E1CA7273F0010D421 /* Turn */ = {
+			isa = PBXGroup;
+			children = (
+				68AA667A1CA739590010D421 /* RollXState.h */,
+				68AA667B1CA739590010D421 /* RollXState.m */,
+				68AA666E1CA734A70010D421 /* Roll3State.h */,
+				68AA666F1CA734A70010D421 /* Roll3State.m */,
+				68AA666B1CA734370010D421 /* Roll4State.h */,
+				68AA666C1CA734370010D421 /* Roll4State.m */,
+				68AA66651CA732D70010D421 /* Roll5State.h */,
+				68AA66661CA732D70010D421 /* Roll5State.m */,
+				68AA66771CA7357E0010D421 /* SingleDice.h */,
+				68AA66781CA7357E0010D421 /* SingleDice.m */,
+				68AA66681CA733180010D421 /* TurnState.h */,
+				68AA665F1CA727540010D421 /* Turn.h */,
+				68AA66601CA727540010D421 /* Turn.m */,
+				68AA66711CA734D30010D421 /* Roll2State.h */,
+				68AA66721CA734D30010D421 /* Roll2State.m */,
+				68AA66741CA734F10010D421 /* Roll1State.h */,
+				68AA66751CA734F10010D421 /* Roll1State.m */,
+			);
+			path = Turn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +231,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AA66671CA732D70010D421 /* Roll5State.m in Sources */,
+				68AA667C1CA739590010D421 /* RollXState.m in Sources */,
+				68AA66791CA7357E0010D421 /* SingleDice.m in Sources */,
 				09A85FD21CA473FB00C7F3C8 /* ViewController.m in Sources */,
+				68AA66761CA734F10010D421 /* Roll1State.m in Sources */,
+				68AA66611CA727540010D421 /* Turn.m in Sources */,
+				68AA66731CA734D30010D421 /* Roll2State.m in Sources */,
 				09A85FCF1CA473FB00C7F3C8 /* AppDelegate.m in Sources */,
 				09A85FCC1CA473FB00C7F3C8 /* main.m in Sources */,
+				68AA665A1CA7161A0010D421 /* Game.m in Sources */,
+				68AA66701CA734A70010D421 /* Roll3State.m in Sources */,
+				68AA666D1CA734370010D421 /* Roll4State.m in Sources */,
 				09A85FE31CA4755B00C7F3C8 /* DieLabel.m in Sources */,
+				68AA66571CA712100010D421 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
