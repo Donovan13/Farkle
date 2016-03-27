@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TurnState.h"
 
-@interface Turn : NSObject
+@interface Turn : NSObject <TurnState>
+@property id <TurnState> state;
+
+-(BOOL) canStopTurn;
+-(NSUInteger) currentScoreTurn;
+-(NSUInteger) selectedDice; // returns count of dice that are selected to hold. User has not yet committed to holding these dice
 
 @end

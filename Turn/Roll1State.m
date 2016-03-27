@@ -14,4 +14,9 @@
 -(void) roll3dice {};
 -(void) roll2dice {};
 
+-(BOOL) canStopTurn {
+    // can never stop after rolling one. either turn continues or turn over
+    return NO;
+}
+
 @end

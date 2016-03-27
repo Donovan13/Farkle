@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "TurnState.h"
 
-@interface Player : NSObject <TurnState>
+@interface Player : NSObject
 
 @property NSString *name;
 @property NSUInteger hits;
 @property NSUInteger points;
-@property id <TurnState> state;
 
 @end

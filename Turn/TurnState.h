@@ -10,6 +10,9 @@
 @class Player;
 
 @protocol TurnState <NSObject>
+@required
+
+-(BOOL) canStopTurn;
 
 @optional
 -(instancetype) initContextWithPlayer:(Player *) player;

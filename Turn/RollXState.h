@@ -6,10 +6,12 @@
 //  Copyright © 2016 Kyle. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Turn.h"
 #import "TurnState.h"
-#import "Player.h"
+#import <Foundation/Foundation.h>
 
 @interface RollXState : NSObject <TurnState>
-@property Player *playerContext;
+@property Turn *turnContext;
+-(void) rollXDice:(NSUInteger) count;
+-(instancetype) initContextWithTurn:(Turn *) turn;
 @end

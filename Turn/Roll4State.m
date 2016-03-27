@@ -10,6 +10,10 @@
 
 @implementation Roll4State
 
--(void) roll5dice {}
+-(BOOL) canStopTurn {
+    // must hold 2 or 3 dice, but cant stop with 4 held
+    // todo - if party bowl
+    return (self.turnContext.selectedDice >= 2 && self.turnContext.selectedDice != 4);
+}
 
 @end

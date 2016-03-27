@@ -10,5 +10,5 @@
 #import "TurnState.h"
 #import "RollXState.h"
 
-@interface Roll5State : RollXState <TurnState>
+@interface Roll5State : RollXState
 @end

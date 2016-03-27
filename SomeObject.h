@@ -1,5 +1,5 @@
 //
-//  Roll2State.h
+//  SomeObject.h
 //  Farkle
 //
 //  Created by id on 3/26/16.
@@ -7,10 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TurnState.h"
-#import "RollXState.h"
 
-@interface Roll2State : RollXState <TurnState>
-
-
+@interface SomeObject : NSObject
 @end

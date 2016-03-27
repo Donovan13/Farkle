@@ -11,18 +11,20 @@
 
 @implementation RollXState
 
--(instancetype) initContextWithPlayer:(Player *) player {
+-(instancetype) initContextWithTurn:(Turn *) turn {
     self = [super init];
     if (self) {
-        _playerContext = player;
+        _turnContext = turn;
     }
     return self;
 }
 
 -(void) rollXDice:(NSUInteger) count {
-    for (int i = 0; i < count; count++) {
-        [SingleDice rollSingleDice];
+    for (int i = 0; i < count; i++) {
+        NSUInteger diceValue = [SingleDice rollSingleDice];
+        NSLog(@"%li", diceValue);
     }
+    NSLog(@"out of loop");
 }
 
 -(void) roll5dice { [self rollXDice:5]; }
@@ -32,5 +34,9 @@
 -(void) roll1dice { [self rollXDice:1]; }
 -(void) stay { }
 
+-(BOOL)canStopTurn {
+    NSLog(@"shouldnt be here, should be overridden in all subclasses");
+    return NO;
+}
 
 @end
