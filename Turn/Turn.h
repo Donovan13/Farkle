@@ -33,8 +33,6 @@
 -(void) removeAllDicesFromHeldDice;
 
 -(void) rollDice;
-
-
-
+-(NSUInteger) pointsForHeldDice;
 
 @end

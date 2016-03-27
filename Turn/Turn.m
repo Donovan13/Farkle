@@ -37,26 +37,11 @@
 }
 
 #pragma mark - public methods
--(void) addDiceToHeldDice:(NSNumber *)dice {
-    [self.heldDice addObject:dice];
-}
-
--(void) removeDiceFromHeldDice:(NSNumber *)dice {
-    [self.heldDice removeObject:dice];
-}
-
--(void) addDicesToHeldDice:(NSArray *)dices {
-    [self.heldDice addObjectsFromArray:dices];
-}
-
--(void) removeAllDicesFromHeldDice {
-    [self.heldDice removeAllObjects];
-}
-
-
--(void) removeAllDices {
-    [self.heldDice removeAllObjects];
-}
+-(void) addDiceToHeldDice:(NSNumber *)dice { [self.heldDice addObject:dice]; }
+-(void) removeDiceFromHeldDice:(NSNumber *)dice { [self.heldDice removeObject:dice]; }
+-(void) addDicesToHeldDice:(NSArray *)dices { [self.heldDice addObjectsFromArray:dices]; }
+-(void) removeAllDicesFromHeldDice { [self.heldDice removeAllObjects]; }
+-(void) removeAllDices { [self.heldDice removeAllObjects]; }
 
 -(NSUInteger)heldDiceCount {
     NSUInteger count = 0;
@@ -66,21 +51,20 @@
     return count;
 }
 
+-(NSUInteger)pointsForHeldDice {
+    // straight
+    // 5 of a kind
+    // 3 of a kind
+    // scoring die
+    return 0;
+}
+
 #pragma mark - <TurnState>
--(BOOL) canStopTurn  {
-    return [self.state canStopTurn];
-}
+-(BOOL) canStopTurn  { return [self.state canStopTurn]; }
+-(BOOL) isTurnOver { return [self.state isTurnOver]; }
+-(void) rollDice { [self.state rollDice]; }
+-(void) stay { [self.state stay]; }
 
--(BOOL) isTurnOver {
-    return [self.state isTurnOver];
-}
 
--(void) rollDice {
-    [self.state rollDice];
-}
-
--(void) stay {
-    [self.state stay];
-}
 
 @end

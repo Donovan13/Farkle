@@ -26,6 +26,7 @@
 		68AA667C1CA739590010D421 /* RollState.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA667B1CA739590010D421 /* RollState.m */; };
 		68AA66841CA743600010D421 /* CanStopTurnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66831CA743600010D421 /* CanStopTurnTests.m */; };
 		68AA66A21CA792140010D421 /* TurnStateChangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A11CA792140010D421 /* TurnStateChangeTests.m */; };
+		68AA66A41CA81A950010D421 /* PointsForHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		68AA66831CA743600010D421 /* CanStopTurnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanStopTurnTests.m; sourceTree = "<group>"; };
 		68AA66851CA743600010D421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AA66A11CA792140010D421 /* TurnStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TurnStateChangeTests.m; path = FarkleTests/TurnStateChangeTests.m; sourceTree = SOURCE_ROOT; };
+		68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointsForHeldDiceTest.m; path = ../Turn/PointsForHeldDiceTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		68AA66821CA743600010D421 /* FarkleTests */ = {
 			isa = PBXGroup;
 			children = (
+				68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */,
 				68AA66831CA743600010D421 /* CanStopTurnTests.m */,
 				68AA66A11CA792140010D421 /* TurnStateChangeTests.m */,
 				68AA66851CA743600010D421 /* Info.plist */,
@@ -319,6 +322,7 @@
 			files = (
 				68AA66A21CA792140010D421 /* TurnStateChangeTests.m in Sources */,
 				68AA66841CA743600010D421 /* CanStopTurnTests.m in Sources */,
+				68AA66A41CA81A950010D421 /* PointsForHeldDiceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
