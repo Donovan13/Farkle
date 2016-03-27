@@ -12,10 +12,6 @@
 #import "Roll2State.h"
 #import "Roll1State.h"
 
-//typedef NS_ENUM(NSUInteger, DicePointsType) {
-//    DicePointsTypeStraight = 0
-//};
-
 @interface Turn()
 @property NSUInteger round;
 @property NSCountedSet <NSNumber*> *heldDice;
@@ -29,13 +25,11 @@
         _state = [[Roll5State alloc] initContextWithTurn:self];
         _round = 0;
         _heldDice = [NSCountedSet new];
-
         _roll1State = [[Roll1State alloc] initContextWithTurn:self];
         _roll2State = [[Roll2State alloc] initContextWithTurn:self];
         _roll3State = [[Roll3State alloc] initContextWithTurn:self];
         _roll4State = [[Roll4State alloc] initContextWithTurn:self];
         _roll5State = [[Roll5State alloc] initContextWithTurn:self];
-
     }
     return self;
 }
@@ -56,14 +50,30 @@
 }
 
 -(NSUInteger)pointsForHeldDice {
+    NSCountedSet *heldDiceCopy = [self.heldDice copy];
+    NSUInteger points = 0;
+
+    // 5 dice scoring options. return immediately
     if ([self isStraight]) {
         return 1500;
     } else if ([self isFiveOfAKindWithOne]){
         return 1600;
     } else if ([self isFiveOfAKind]) {
         return 1500;
+
+    // 3 dice scoring options. dont return immediately to count extra dice
+    } else if ([self isThreeOfAKindWithOne]) {
+        for (int i=0; i<3; i++) [heldDiceCopy removeObject:@1];
+        points = 1000;
+    } else if ([self isThreeOfAKindNotOne]) {
+        NSNumber *threeKindDice = [self whichThreeOfAKind];
+        for (int i=0; i<3; i++) [heldDiceCopy removeObject:threeKindDice];
+        points = 100 * [threeKindDice intValue];
     }
-    return 0;
+
+    points += [heldDiceCopy countForObject:@1] * 100;
+    points += [heldDiceCopy countForObject:@5] * 50;
+    return points;
 }
 
 #pragma mark - private methods
@@ -75,10 +85,27 @@
     return (has2Thru5 && has1) || (has2Thru5 && has6);
 }
 
+-(BOOL) isThreeOfAKindWithOne { return [self.heldDice countForObject:@1]==3 || [self.heldDice countForObject:@1]==4; }
 
--(BOOL) isFiveOfAKindWithOne {
-    return [self.heldDice countForObject:@1]==5;
+-(BOOL) isThreeOfAKindNotOne {
+    for (NSNumber *dice in self.heldDice ) {
+        if ([self.heldDice countForObject:dice] == 3 && ![dice isEqualToNumber:@1]) {
+            return YES;
+        }
+    }
+    return NO;
 }
+
+-(NSNumber *) whichThreeOfAKind {
+    for (NSNumber *dice in self.heldDice ) {
+        if ([self.heldDice countForObject:dice] == 3) {
+            return dice ;
+        }
+    }
+    return @-1;
+}
+
+-(BOOL) isFiveOfAKindWithOne { return [self.heldDice countForObject:@1]==5; }
 
 -(BOOL) isFiveOfAKind {
     for (NSNumber *dice in self.heldDice ) {
