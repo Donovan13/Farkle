@@ -12,6 +12,10 @@
 #import "Roll2State.h"
 #import "Roll1State.h"
 
+//typedef NS_ENUM(NSUInteger, DicePointsType) {
+//    DicePointsTypeStraight = 0
+//};
+
 @interface Turn()
 @property NSUInteger round;
 @property NSCountedSet <NSNumber*> *heldDice;
@@ -52,11 +56,19 @@
 }
 
 -(NSUInteger)pointsForHeldDice {
-    // straight
-    // 5 of a kind
-    // 3 of a kind
-    // scoring die
+    if ([self isStraight]) {
+        return 1500;
+    }
     return 0;
+}
+
+#pragma mark - private methods
+-(BOOL) isStraight {
+    BOOL has2Thru5 = [self.heldDice containsObject:@2] && [self.heldDice containsObject:@3] &&
+                     [self.heldDice containsObject:@4] && [self.heldDice containsObject:@5];
+    BOOL has1 = [self.heldDice containsObject:@1];
+    BOOL has6 = [self.heldDice containsObject:@6];
+    return (has2Thru5 && has1) || (has2Thru5 && has6);
 }
 
 #pragma mark - <TurnState>
@@ -64,7 +76,5 @@
 -(BOOL) isTurnOver { return [self.state isTurnOver]; }
 -(void) rollDice { [self.state rollDice]; }
 -(void) stay { [self.state stay]; }
-
-
 
 @end

@@ -33,4 +33,10 @@
     XCTAssertEqual(1500, self.turn.pointsForHeldDice);
 }
 
+- (void)testStraight_2_thru_6 {
+    [self.turn addDicesToHeldDice:@[@6, @2, @3, @4, @5]];
+    [self.turn rollDice];
+    XCTAssertEqual(1500, self.turn.pointsForHeldDice);
+}
+
 @end

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "TurnState.h"
 
-
 @interface Turn:NSObject <TurnState>
 
 // states
