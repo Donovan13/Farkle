@@ -58,6 +58,10 @@
 -(NSUInteger)pointsForHeldDice {
     if ([self isStraight]) {
         return 1500;
+    } else if ([self isFiveOfAKindWithOne]){
+        return 1600;
+    } else if ([self isFiveOfAKind]) {
+        return 1500;
     }
     return 0;
 }
@@ -69,6 +73,20 @@
     BOOL has1 = [self.heldDice containsObject:@1];
     BOOL has6 = [self.heldDice containsObject:@6];
     return (has2Thru5 && has1) || (has2Thru5 && has6);
+}
+
+
+-(BOOL) isFiveOfAKindWithOne {
+    return [self.heldDice countForObject:@1]==5;
+}
+
+-(BOOL) isFiveOfAKind {
+    for (NSNumber *dice in self.heldDice ) {
+        if ([self.heldDice countForObject:dice] == 5) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 #pragma mark - <TurnState>

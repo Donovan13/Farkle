@@ -39,4 +39,16 @@
     XCTAssertEqual(1500, self.turn.pointsForHeldDice);
 }
 
+- (void)testFiveOfAKind_3 {
+    [self.turn addDicesToHeldDice:@[@3, @3, @3, @3, @3]];
+    [self.turn rollDice];
+    XCTAssertEqual(1500, self.turn.pointsForHeldDice);
+}
+
+- (void)testFiveOfAKind_1 {
+    [self.turn addDicesToHeldDice:@[@1, @1, @1, @1, @1]];
+    [self.turn rollDice];
+    XCTAssertEqual(1600, self.turn.pointsForHeldDice);
+}
+
 @end

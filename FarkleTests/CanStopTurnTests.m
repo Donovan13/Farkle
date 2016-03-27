@@ -60,6 +60,4 @@
     XCTAssertFalse(self.turn.canStopTurn);
 };
 
-
-
 @end
