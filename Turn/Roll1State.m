@@ -9,10 +9,7 @@
 #import "Roll1State.h"
 
 @implementation Roll1State
--(void) roll5dice {};
--(void) roll4dice {};
--(void) roll3dice {};
--(void) roll2dice {};
+-(void) roll{};
 
 -(BOOL) canStopTurn {
     // can never stop after rolling one. either turn continues or turn over

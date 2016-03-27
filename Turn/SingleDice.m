@@ -11,8 +11,9 @@ static u_int32_t diceSides = 6;
 
 @implementation SingleDice
 
-+(NSInteger) rollSingleDice {
-    return arc4random_uniform(diceSides) + 1;
++(NSNumber *) rollSingleDice {
+    u_int32_t i = arc4random_uniform(diceSides + 1);
+    return [NSNumber numberWithInt:i];
 }
 
 @end

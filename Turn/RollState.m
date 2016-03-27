@@ -1,14 +1,23 @@
 //
-//  Roll4.m
+//  RollState.m
 //  Farkle
 //
 //  Created by id on 3/26/16.
 //  Copyright © 2016 Kyle. All rights reserved.
 //
 
-#import "Roll4State.h"
+#import "RollState.h"
+#import "SingleDice.h"
 
-@implementation Roll4State
+@implementation RollState
+
+-(instancetype) initContextWithTurn:(Turn *) turn {
+    self = [super init];
+    if (self) {
+        _turnContext = turn;
+    }
+    return self;
+}
 
 -(void)rollDice {
     // figure out how many dice to roll
@@ -19,7 +28,7 @@
 
     // switch to new state
     switch (diceToRoll) {
-        case 5:
+        case 0: // pick up all 5 and roll 5 again
             self.turnContext.state = self.turnContext.roll5State;
             break;
         case 4:
@@ -38,16 +47,21 @@
             break;
     }
 
-    // and now roll the dice
-    [self.turnContext.state rollDice];
+    for (int i = 0; i < diceToRoll; i++) {
+        [self.turnContext.rolledDice addObject:[SingleDice rollSingleDice]];
+    }
 }
 
+-(void) stay { }
 
--(BOOL) canStopTurn {
-    // must hold 2 or 3 dice, but cant stop with 4 held
-    // todo - if party bowl
-    return (self.turnContext.heldDiceCount >= 2 &&
-            self.turnContext.heldDiceCount != 4);
+-(BOOL)canStopTurn {
+    NSLog(@"shouldnt be here, should be overridden in all subclasses");
+    return NO;
+}
+
+-(BOOL) isTurnOver {
+    NSLog(@"shouldnt be here, should be overridden in all subclasses");
+    return NO;
 }
 
 @end

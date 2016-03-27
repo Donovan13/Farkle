@@ -12,15 +12,15 @@
 @protocol TurnState <NSObject>
 @required
 
+-(BOOL) isTurnOver;
 -(BOOL) canStopTurn;
+
+// events that transition between states
+-(void) rollDice;
+-(void) stay;
+// *************************************
 
 @optional
 -(instancetype) initContextWithPlayer:(Player *) player;
--(void) roll5dice;
--(void) roll4dice;
--(void) roll3dice;
--(void) roll2dice;
--(void) roll1dice;
--(void) stay;
 
 @end

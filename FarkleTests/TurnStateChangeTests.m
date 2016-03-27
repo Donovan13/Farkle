@@ -1,0 +1,75 @@
+//
+//  TurnStateChangeTests.m
+//  Farkle
+//
+//  Created by id on 3/26/16.
+//  Copyright © 2016 Kyle. All rights reserved.
+//
+
+#import <XCTest/XCTest.h>
+#import <Foundation/Foundation.h>
+#import "Turn.h"
+#import "Roll5State.h"
+#import "Roll4State.h"
+#import "Roll3State.h"
+#import "Roll2State.h"
+#import "Roll1State.h"
+
+@interface TurnStateChangeTests : XCTestCase
+@property Turn *turn;
+@end
+
+@implementation TurnStateChangeTests
+
+- (void)setUp {
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+    [super setUp];
+    self.turn = [Turn new];
+}
+
+- (void)tearDown {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+    [self.turn removeAllDicesFromHeldDice];
+}
+
+- (void)testRollState5_isInitialState{
+    // doing strings instead of actual classes because of this wtfness:http://davidstechtips.com/2015/04/iskindofclass-and-xctest/
+    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll5State class])]);
+}
+
+- (void)testRollState5_to_RollState4 {
+    [self.turn addDicesToHeldDice:@[@1]];
+    [self.turn rollDice];
+    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll4State class])]);
+}
+
+- (void)testRollState5_to_RollState1 {
+    [self.turn addDicesToHeldDice:@[@1, @1, @1, @5]];
+    [self.turn rollDice];
+    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll1State class])]);
+}
+
+- (void)testRollState5_to_RollState5 {
+    [self.turn addDicesToHeldDice:@[@1, @1, @1, @5, @5]];
+    [self.turn rollDice];
+    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll5State class])]);
+}
+
+- (void)testRollState4_to_RollState1 {
+    [self.turn addDicesToHeldDice:@[@1]];
+    [self.turn rollDice];
+    [self.turn addDicesToHeldDice:@[@2, @2, @2]];
+    [self.turn rollDice];
+    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll1State class])]);
+}
+
+- (void)testRollState1_to_RollState5 {
+    [self.turn addDicesToHeldDice:@[@1, @1, @5, @5]];
+    [self.turn rollDice];
+    [self.turn addDicesToHeldDice:@[@5]];
+    [self.turn rollDice];
+    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll5State class])]);
+}
+
+@end

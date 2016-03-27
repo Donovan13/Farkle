@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TurnState.h"
+#import "Turn.h"
 
-@interface Player : NSObject
+@interface Player:NSObject
 
 @property NSString *name;
 @property NSUInteger hits;
 @property NSUInteger points;
+@property Turn *turn;
+
+//-(void) startNewTurn;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  RollXState.h
+//  RollState.h
 //  Farkle
 //
 //  Created by id on 3/26/16.
@@ -10,8 +10,7 @@
 #import "TurnState.h"
 #import <Foundation/Foundation.h>
 
-@interface RollXState : NSObject <TurnState>
+@interface RollState : NSObject <TurnState>
 @property Turn *turnContext;
--(void) rollXDice:(NSUInteger) count;
 -(instancetype) initContextWithTurn:(Turn *) turn;
 @end

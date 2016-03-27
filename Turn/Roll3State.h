@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RollXState.h"
+#import "RollState.h"
 
 
-@interface Roll3State : RollXState
+@interface Roll3State : RollState
 
 @end

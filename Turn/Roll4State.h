@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "TurnState.h"
-#import "RollXState.h"
+#import "RollState.h"
 
-@interface Roll4State : RollXState <TurnState>
+@interface Roll4State : RollState <TurnState>
 
 @end

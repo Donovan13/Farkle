@@ -1,5 +1,4 @@
-//
-//  Turn.m
+
 //  Farkle
 //
 //  Created by id on 3/26/16.
@@ -8,11 +7,14 @@
 
 #import "Turn.h"
 #import "Roll5State.h"
+#import "Roll4State.h"
+#import "Roll3State.h"
+#import "Roll2State.h"
+#import "Roll1State.h"
 
 @interface Turn()
 @property NSUInteger round;
-@property NSMutableSet<NSNumber*> *heldDie;
-@property NSMutableSet<NSNumber*> *rolledDie;
+@property NSCountedSet <NSNumber*> *heldDice;
 @end
 
 @implementation Turn
@@ -20,45 +22,65 @@
 -(instancetype) init {
     self = [super init];
     if (self) {
-        _state = [Roll5State new];
+        _state = [[Roll5State alloc] initContextWithTurn:self];
         _round = 0;
+        _heldDice = [NSCountedSet new];
+
+        _roll1State = [[Roll1State alloc] initContextWithTurn:self];
+        _roll2State = [[Roll2State alloc] initContextWithTurn:self];
+        _roll3State = [[Roll3State alloc] initContextWithTurn:self];
+        _roll4State = [[Roll4State alloc] initContextWithTurn:self];
+        _roll5State = [[Roll5State alloc] initContextWithTurn:self];
+
     }
     return self;
 }
 
-#pragma mark - <TurnState>
+#pragma mark - public methods
+-(void) addDiceToHeldDice:(NSNumber *)dice {
+    [self.heldDice addObject:dice];
+}
 
+-(void) removeDiceFromHeldDice:(NSNumber *)dice {
+    [self.heldDice removeObject:dice];
+}
+
+-(void) addDicesToHeldDice:(NSArray *)dices {
+    [self.heldDice addObjectsFromArray:dices];
+}
+
+-(void) removeAllDicesFromHeldDice {
+    [self.heldDice removeAllObjects];
+}
+
+
+-(void) removeAllDices {
+    [self.heldDice removeAllObjects];
+}
+
+-(NSUInteger)heldDiceCount {
+    NSUInteger count = 0;
+    for (NSNumber *num in [self.heldDice allObjects]) {
+        count += [self.heldDice countForObject:num];
+    }
+    return count;
+}
+
+#pragma mark - <TurnState>
 -(BOOL) canStopTurn  {
     return [self.state canStopTurn];
 }
 
--(void) roll5dice {
-    [self.state roll5dice];
+-(BOOL) isTurnOver {
+    return [self.state isTurnOver];
 }
 
--(void) roll4dice {
-    [self.state roll4dice];
-}
-
--(void) roll3dice {
-    [self.state roll3dice];
-}
-
--(void) roll2dice {
-    [self.state roll2dice];
-}
-
--(void) roll1dice {
-    [self.state roll1dice];
+-(void) rollDice {
+    [self.state rollDice];
 }
 
 -(void) stay {
     [self.state stay];
-}
-
--(NSUInteger) selectedDice {
-    // need to get this from the UI somehow
-    return 3;
 }
 
 @end
