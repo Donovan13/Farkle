@@ -14,7 +14,6 @@
 @implementation DieLabel
 
 - (id) initWithCoder:(NSCoder *)aDecoder {
-    NSLog(@"in init with coder");
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.userInteractionEnabled = YES;

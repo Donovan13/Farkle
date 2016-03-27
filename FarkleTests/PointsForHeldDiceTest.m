@@ -29,92 +29,77 @@
 
 - (void)testStraight_1_thru_5 {
     [self.turn addDicesToHeldDice:@[@1, @2, @3, @4, @5]];
-    [self.turn rollDice];
-    XCTAssertEqual(1500, self.turn.pointsForHeldDice);
+    XCTAssertEqual(1500, self.turn.heldDice.points);
 }
 
 - (void)testStraight_2_thru_6 {
     [self.turn addDicesToHeldDice:@[@6, @2, @3, @4, @5]];
-    [self.turn rollDice];
-    XCTAssertEqual(1500, self.turn.pointsForHeldDice);
+    XCTAssertEqual(1500, self.turn.heldDice.points);
 }
 
 - (void)testFiveOfAKind_3 {
     [self.turn addDicesToHeldDice:@[@3, @3, @3, @3, @3]];
-    [self.turn rollDice];
-    XCTAssertEqual(1500, self.turn.pointsForHeldDice);
+    XCTAssertEqual(1500, self.turn.heldDice.points);
 }
 
 - (void)testFiveOfAKind_1 {
     [self.turn addDicesToHeldDice:@[@1, @1, @1, @1, @1]];
-    [self.turn rollDice];
-    XCTAssertEqual(1600, self.turn.pointsForHeldDice);
+    XCTAssertEqual(1600, self.turn.heldDice.points);
 }
 
 - (void)testThreeOfAKind_1 {
     [self.turn addDicesToHeldDice:@[@1, @1, @1, @2, @3]];
-    [self.turn rollDice];
-    XCTAssertEqual(1000, self.turn.pointsForHeldDice);
+    XCTAssertEqual(1000, self.turn.heldDice.points);
 }
 
 - (void)testThreeOfAKind_3 {
     [self.turn addDicesToHeldDice:@[@2, @3, @3, @2, @3]];
-    [self.turn rollDice];
-    XCTAssertEqual(300, self.turn.pointsForHeldDice);
+    XCTAssertEqual(300, self.turn.heldDice.points);
 }
 
 - (void)testThreeOfAKind_6 {
     [self.turn addDicesToHeldDice:@[@2, @6, @6, @2, @6]];
-    [self.turn rollDice];
-    XCTAssertEqual(600, self.turn.pointsForHeldDice);
+    XCTAssertEqual(600, self.turn.heldDice.points);
 }
 
 - (void)testThreeOfAKind_6_extrasv1 {
     [self.turn addDicesToHeldDice:@[@1, @6, @6, @2, @6]];
-    [self.turn rollDice];
-    XCTAssertEqual(700, self.turn.pointsForHeldDice);
+    XCTAssertEqual(700, self.turn.heldDice.points);
 }
 
 - (void)testThreeOfAKind_6_extrasv2 {
     [self.turn addDicesToHeldDice:@[@1, @6, @6, @5, @6]];
-    [self.turn rollDice];
-    XCTAssertEqual(750, self.turn.pointsForHeldDice);
+    XCTAssertEqual(750, self.turn.heldDice.points);
 }
 
 - (void)testThreeOfAKind_1_extrasv1 {
     [self.turn addDicesToHeldDice:@[@1, @1, @1, @2, @1]];
-    [self.turn rollDice];
-    XCTAssertEqual(1100, self.turn.pointsForHeldDice);
+    XCTAssertEqual(1100, self.turn.heldDice.points);
 }
 
 - (void)testThreeOfAKind_1_extrasv2 {
     [self.turn addDicesToHeldDice:@[@1, @1, @1, @1]];
-    [self.turn rollDice];
-    XCTAssertEqual(1100, self.turn.pointsForHeldDice);
+    XCTAssertEqual(1100, self.turn.heldDice.points);
 }
 
 - (void)testOnlyScoringDice_v1 {
     [self.turn addDicesToHeldDice:@[@1, @5, @2, @3, @2]];
-    [self.turn rollDice];
-    XCTAssertEqual(150, self.turn.pointsForHeldDice);
+    XCTAssertEqual(150, self.turn.heldDice.points);
 }
 
 - (void)testOnlyScoringDice_v2 {
     [self.turn addDicesToHeldDice:@[@1]];
-    [self.turn rollDice];
-    XCTAssertEqual(100, self.turn.pointsForHeldDice);
+    XCTAssertEqual(100, self.turn.heldDice.points);
 }
 
 - (void)testOnlyNoScoringDice_v1 {
     [self.turn addDicesToHeldDice:@[@2, @2, @3, @3, @4]];
-    [self.turn rollDice];
-    XCTAssertEqual(0, self.turn.pointsForHeldDice);
+    XCTAssertEqual(0, self.turn.heldDice.points);
 }
 
 - (void)testOnlyNoScoringDice_v2 {
     [self.turn addDicesToHeldDice:@[@2, @6]];
-    [self.turn rollDice];
-    XCTAssertEqual(0, self.turn.pointsForHeldDice);
+    XCTAssertEqual(0, self.turn.heldDice.points);
 }
 
 @end

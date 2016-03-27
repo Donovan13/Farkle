@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DieLabel.h"
+#import "NSCountedSet+Dice.h"
 
 @interface ViewController ()<DieLabelDelegate>
 
@@ -43,17 +44,11 @@
 -(void) moveDieToHeldArea:(DieLabel *) dieLabel {
     CGPoint newCenter = [self pointForNextEmptyHeldDieArea];
 
-    NSLog(@"before frame %@", NSStringFromCGRect(dieLabel.frame));
-    NSLog(@"before bounds %@", NSStringFromCGRect(dieLabel.bounds));
     [UIView animateWithDuration:0.5
                      animations:^{ dieLabel.center = newCenter; }
                      completion:^(BOOL finished) {
                          [self.view removeConstraints:dieLabel.constraints];
                      }];
-
-
-    NSLog(@"after frame%@", NSStringFromCGRect(dieLabel.frame));
-    NSLog(@"after bounds %@", NSStringFromCGRect(dieLabel.bounds));
 }
 
 #pragma mark - private methods

@@ -39,37 +39,43 @@
 }
 
 - (void)testRollState5_to_RollState4 {
-    [self.turn addDicesToHeldDice:@[@1]];
+    [self.turn.heldDice  addDices:@[@1]];
     [self.turn rollDice];
     XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll4State class])]);
 }
 
 - (void)testRollState5_to_RollState1 {
-    [self.turn addDicesToHeldDice:@[@1, @1, @1, @5]];
+    [self.turn.heldDice addDices:@[@1, @1, @1, @5]];
     [self.turn rollDice];
     XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll1State class])]);
 }
 
 - (void)testRollState5_to_RollState5 {
-    [self.turn addDicesToHeldDice:@[@1, @1, @1, @5, @5]];
+    [self.turn.heldDice addDices:@[@1, @1, @1, @5, @5]];
     [self.turn rollDice];
     XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll5State class])]);
 }
 
 - (void)testRollState4_to_RollState1 {
-    [self.turn addDicesToHeldDice:@[@1]];
+    [self.turn.heldDice addDices:@[@1]];
     [self.turn rollDice];
-    [self.turn addDicesToHeldDice:@[@2, @2, @2]];
+    [self.turn.heldDice addDices:@[@2, @2, @2]];
     [self.turn rollDice];
-    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll1State class])]);
+
+    NSString *expectedClass = NSStringFromClass([self.turn.state class]);
+    NSString *receivedClass = NSStringFromClass([Roll1State class]);
+    XCTAssertEqualObjects(expectedClass, receivedClass, @"exp:%@ rec:%@", expectedClass, receivedClass);
 }
 
 - (void)testRollState1_to_RollState5 {
-    [self.turn addDicesToHeldDice:@[@1, @1, @5, @5]];
+    [self.turn.heldDice addDices:@[@1, @1, @5, @5]];
     [self.turn rollDice];
-    [self.turn addDicesToHeldDice:@[@5]];
+    [self.turn.heldDice addDices:@[@5]];
     [self.turn rollDice];
-    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll5State class])]);
+
+    NSString *expectedClass = NSStringFromClass([self.turn.state class]);
+    NSString *receivedClass = NSStringFromClass([Roll5State class]);
+    XCTAssertEqualObjects(expectedClass, receivedClass, @"exp:%@ rec:%@", expectedClass, receivedClass);
 }
 
 @end

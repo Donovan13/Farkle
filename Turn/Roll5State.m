@@ -15,7 +15,7 @@
 -(BOOL) canStopTurn {
     // must hold 3 or 4 dice, but cant stop with 5 held
     // todo - if party bowl
-    return (self.turnContext.heldDiceCount >= 3 && self.turnContext.heldDiceCount != 5);
+    return (self.turnContext.heldDice.diceCount >= 3 && self.turnContext.heldDice.diceCount != 5);
 }
 
 // orphaned comments

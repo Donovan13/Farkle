@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TurnState.h"
+#import "NSCountedSet+Dice.h"
 
 @interface Turn:NSObject <TurnState>
 
@@ -18,13 +19,17 @@
 @property id <TurnState> roll3State;
 @property id <TurnState> roll4State;
 @property id <TurnState> roll5State;
+@property NSUInteger pointsForTurn;
 
 @property NSCountedSet<NSNumber*> *rolledDice;
+@property NSCountedSet<NSNumber*> *heldDice;
+@property NSArray<NSNumber*> *bankedDice;
 
 -(BOOL) canStopTurn;
 // returns count of dice that are held to hold. User has not yet committed to holding these dice
--(NSUInteger) heldDiceCount;
+//-(NSUInteger) heldDiceCount;
 
+-(BOOL) canMoveDiceToHeldDice:(NSNumber *)dice;
 -(void) addDiceToHeldDice:(NSNumber *)dice;
 -(void) removeDiceFromHeldDice:(NSNumber *)dice;
 
