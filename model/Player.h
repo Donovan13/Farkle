@@ -15,6 +15,6 @@
 @property NSUInteger hits;
 @property NSUInteger points;
 @property Turn *turn;
-//-(void) startNewTurn;
+-(void) startNewTurn;
 
 @end

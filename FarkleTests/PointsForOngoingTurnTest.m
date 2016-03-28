@@ -34,5 +34,17 @@
     XCTAssertEqual(1500 + 250, self.turn.pointsForTurn);
 }
 
+- (void)testOngoingRoundPoints3Rounds {
+    [self.turn.heldDice addDices:@[@1, @2, @3, @4, @5]];
+    [self.turn rollDice];
+    [self.turn.heldDice addDices:@[@1, @1, @5]];
+    [self.turn rollDice];
+    [self.turn.heldDice addDices:@[@1, @1]];
+    [self.turn rollDice];
+    [self.turn.heldDice addDices:@[@6, @6, @6]];
+    [self.turn rollDice];
+
+    XCTAssertEqual(1500 + 250 + 200 + 600, self.turn.pointsForTurn);
+}
 
 @end

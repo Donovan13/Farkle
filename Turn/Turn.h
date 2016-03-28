@@ -26,8 +26,7 @@
 @property NSCountedSet<NSNumber*> *bankedDice;
 
 -(BOOL) canStopTurn;
-// returns count of dice that are held to hold. User has not yet committed to holding these dice
--(BOOL) canMoveDiceToHeldDice:(NSNumber *)dice;
+-(BOOL) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice;
 -(void) copyHeldDiceToBankedDice;
 
 @end

@@ -10,11 +10,6 @@
 
 @implementation Roll2State
 
--(void) roll5dice {};
--(void) roll4dice {};
--(void) roll3dice {};
--(void) stay {};
-
 -(BOOL) canStopTurn {
     // must hold 1 dice, but cant stop with 2 held
     return (self.turnContext.heldDice.diceCount == 1);

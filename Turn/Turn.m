@@ -37,15 +37,15 @@
 }
 
 #pragma mark - public methods
--(BOOL) canMoveDiceToHeldDice:(NSNumber *)dice {
+-(BOOL) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice {
     NSUInteger intDice = [dice unsignedIntegerValue];
     if (intDice == 1 || intDice == 5) {
         return YES;
     } else if (YES) {
+        // TODO: implement me
         // rolled dice straight containing number
         // or
         // rolled dice 3 of a kind containing number
-        // TODO: implement me
         return YES;
     } else {
         return NO;
@@ -61,8 +61,8 @@
 }
 
 -(NSString *) description {
-    return [NSString stringWithFormat:@"Banked: %@\nRolled:%@\nHeld:%@",
-            self.bankedDice, self.rolledDice, self.heldDice];
+    return [NSString stringWithFormat:@"Banked: %@\nRolled:%@\nHeld:%@\nPoints:%li",
+            self.bankedDice, self.rolledDice, self.heldDice, self.pointsForTurn];
 }
 
 #pragma mark - private methods

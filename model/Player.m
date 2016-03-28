@@ -7,9 +7,27 @@
 //
 
 #import "Player.h"
-
-@interface Player()
-@end
+#import "Turn.h"
 
 @implementation Player
+
+-(void)startNewTurn {
+    // get a turn object
+    Turn *turn = [Turn new];
+
+    // roll the dice
+    [turn rollDice];
+
+    // decide which dice to bank
+    // something like
+//    if ([turn canMoveDiceToHeldDice:dice ]) {
+//    }
+
+
+    // keep going until turn is over
+    // add points to the total
+}
+
+
+
 @end
