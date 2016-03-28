@@ -17,17 +17,15 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
     self.turn = [Turn new];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
     [self.turn.heldDice removeAllDice];
 }
 
-- (void)tstOngoingRoundPoints {
+- (void)testOngoingRoundPoints {
     [self.turn.heldDice addDices:@[@1, @2, @3, @4, @5]];
     [self.turn rollDice];
     [self.turn.heldDice addDices:@[@1, @1, @5]];

@@ -39,6 +39,8 @@
     switch (diceToRoll) {
         case 0: // pick up all 5 and roll 5 again
             self.turnContext.state = self.turnContext.roll5State;
+            // clear out the banked dice
+            [self.turnContext.bankedDice removeAllDice];
             break;
         case 4:
             self.turnContext.state = self.turnContext.roll4State;
