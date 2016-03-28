@@ -26,6 +26,7 @@
         _pointsForTurn = 0;
         _rolledDice = [NSCountedSet new];
         _heldDice = [NSCountedSet new];
+        _bankedDice = [NSCountedSet new];
         _roll1State = [[Roll1State alloc] initContextWithTurn:self];
         _roll2State = [[Roll2State alloc] initContextWithTurn:self];
         _roll3State = [[Roll3State alloc] initContextWithTurn:self];
@@ -36,12 +37,6 @@
 }
 
 #pragma mark - public methods
--(void) addDiceToHeldDice:(NSNumber *)dice { [self.heldDice addObject:dice]; }
--(void) removeDiceFromHeldDice:(NSNumber *)dice { [self.heldDice removeObject:dice]; }
--(void) addDicesToHeldDice:(NSArray *)dices { [self.heldDice addObjectsFromArray:dices]; }
--(void) removeAllDicesFromHeldDice { [self.heldDice removeAllObjects]; }
--(void) removeAllDices { [self.heldDice removeAllObjects]; }
-
 -(BOOL) canMoveDiceToHeldDice:(NSNumber *)dice {
     NSUInteger intDice = [dice unsignedIntegerValue];
     if (intDice == 1 || intDice == 5) {
@@ -50,10 +45,24 @@
         // rolled dice straight containing number
         // or
         // rolled dice 3 of a kind containing number
+        // TODO: implement me
         return YES;
     } else {
         return NO;
     }
+}
+
+-(void) copyHeldDiceToBankedDice {
+    for (NSNumber *dice in self.heldDice) {
+        for (int i = 0; i < [self.heldDice countForObject:dice] ; i++) {
+            [self.bankedDice addDice:dice];
+        }
+    }
+}
+
+-(NSString *) description {
+    return [NSString stringWithFormat:@"Banked: %@\nRolled:%@\nHeld:%@",
+            self.bankedDice, self.rolledDice, self.heldDice];
 }
 
 #pragma mark - private methods

@@ -21,14 +21,19 @@
 
 -(void) rollDice {
     // figure out how many dice to roll
-    NSUInteger diceToRoll = 5 - self.turnContext.heldDice.diceCount;
+    NSUInteger heldDiceCount = self.turnContext.heldDice.diceCount;
+    NSUInteger bankedDiceCount = self.turnContext.bankedDice.diceCount;
+    NSUInteger diceToRoll = 5 - heldDiceCount - bankedDiceCount;
 
     // clear out the previously rolled die
     [self.turnContext.rolledDice removeAllObjects];
 
+    // add the held dice to the banked dice
+    [self.turnContext copyHeldDiceToBankedDice];
+
     // clear out held dice and add the points
     self.turnContext.pointsForTurn += self.turnContext.heldDice.points;
-    [self.turnContext removeAllDicesFromHeldDice];
+    [self.turnContext.heldDice removeAllDice];
 
     // switch to new state
     switch (diceToRoll) {

@@ -92,9 +92,25 @@
     return @-1;
 }
 
--(void) addDice:(NSNumber *) dice {}
--(void) addDices:(NSArray *) dices {}
--(void) removeDice:(NSNumber *) dice {}
--(void) removeAllDice {}
+
+-(void) addDices:(NSArray<NSNumber *> *) dices {
+    for (NSNumber *dice in dices) {
+        [self addDice:dice];
+    }
+}
+
+-(void) addDice:(NSNumber *) dice { [self addObject:dice]; }
+-(void) removeDice:(NSNumber *) dice { [self removeObject:dice]; }
+-(void) removeAllDice { [self removeAllObjects]; }
+
+-(NSString *) description {
+    NSString *string = @"";
+    NSLog(@"%@", self);
+    for (NSNumber *dice in self) {
+        [string stringByAppendingFormat:@"%@", dice];
+    }
+    return @"wtf";
+    return string;
+}
 
 @end

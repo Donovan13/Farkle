@@ -23,20 +23,11 @@
 
 @property NSCountedSet<NSNumber*> *rolledDice;
 @property NSCountedSet<NSNumber*> *heldDice;
-@property NSArray<NSNumber*> *bankedDice;
+@property NSCountedSet<NSNumber*> *bankedDice;
 
 -(BOOL) canStopTurn;
 // returns count of dice that are held to hold. User has not yet committed to holding these dice
-//-(NSUInteger) heldDiceCount;
-
 -(BOOL) canMoveDiceToHeldDice:(NSNumber *)dice;
--(void) addDiceToHeldDice:(NSNumber *)dice;
--(void) removeDiceFromHeldDice:(NSNumber *)dice;
-
--(void) addDicesToHeldDice:(NSArray *)dices;
--(void) removeAllDicesFromHeldDice;
-
--(void) rollDice;
--(NSUInteger) pointsForHeldDice;
+-(void) copyHeldDiceToBankedDice;
 
 @end

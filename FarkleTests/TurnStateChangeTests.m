@@ -30,30 +30,41 @@
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
-    [self.turn removeAllDicesFromHeldDice];
+    [self.turn.heldDice removeAllDice];
 }
 
 - (void)testRollState5_isInitialState{
     // doing strings instead of actual classes because of this wtfness:http://davidstechtips.com/2015/04/iskindofclass-and-xctest/
-    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll5State class])]);
+    NSString *expectedClass = NSStringFromClass([self.turn.state class]);
+    NSString *receivedClass = NSStringFromClass([Roll5State class]);
+    XCTAssertEqualObjects(expectedClass, receivedClass, @"exp:%@ rec:%@", expectedClass, receivedClass);
 }
 
 - (void)testRollState5_to_RollState4 {
     [self.turn.heldDice  addDices:@[@1]];
     [self.turn rollDice];
-    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll4State class])]);
+
+    NSString *expectedClass = NSStringFromClass([self.turn.state class]);
+    NSString *receivedClass = NSStringFromClass([Roll4State class]);
+    XCTAssertEqualObjects(expectedClass, receivedClass, @"exp:%@ rec:%@", expectedClass, receivedClass);
 }
 
 - (void)testRollState5_to_RollState1 {
     [self.turn.heldDice addDices:@[@1, @1, @1, @5]];
     [self.turn rollDice];
-    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll1State class])]);
+
+    NSString *expectedClass = NSStringFromClass([self.turn.state class]);
+    NSString *receivedClass = NSStringFromClass([Roll1State class]);
+    XCTAssertEqualObjects(expectedClass, receivedClass, @"exp:%@ rec:%@", expectedClass, receivedClass);
 }
 
 - (void)testRollState5_to_RollState5 {
     [self.turn.heldDice addDices:@[@1, @1, @1, @5, @5]];
     [self.turn rollDice];
-    XCTAssert([NSStringFromClass([self.turn.state class]) isEqualToString:NSStringFromClass([Roll5State class])]);
+
+    NSString *expectedClass = NSStringFromClass([self.turn.state class]);
+    NSString *receivedClass = NSStringFromClass([Roll5State class]);
+    XCTAssertEqualObjects(expectedClass, receivedClass, @"exp:%@ rec:%@", expectedClass, receivedClass);
 }
 
 - (void)testRollState4_to_RollState1 {

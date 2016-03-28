@@ -23,7 +23,7 @@
 
 - (void)tearDown {
     [super tearDown];
-    [self.turn removeAllDicesFromHeldDice];
+    [self.turn.heldDice removeAllDice];
 }
 
 - (void)testRoll5_0_HeldDice {
@@ -32,31 +32,31 @@
 
 - (void)testRoll5_1_HeldDice {
     NSArray *tmp =@[@1];
-    [self.turn addDicesToHeldDice:tmp];
+    [self.turn.heldDice addDices:tmp];
     XCTAssertFalse(self.turn.canStopTurn);
 }
 
 - (void)testRoll5_2_HeldDice {
     NSArray *tmp =@[@1, @5];
-    [self.turn addDicesToHeldDice:tmp];
+    [self.turn.heldDice addDices:tmp];
     XCTAssertFalse(self.turn.canStopTurn);
 }
 
 - (void)testRoll5_3_heldDice{
     NSArray *tmp =@[@1, @5, @5];
-    [self.turn addDicesToHeldDice:tmp];
+    [self.turn.heldDice addDices:tmp];
     XCTAssertTrue(self.turn.canStopTurn);
 };
 
 - (void)testRoll5_4_heldDice{
     NSArray *tmp =@[@1, @2, @2, @2];
-    [self.turn addDicesToHeldDice:tmp];
+    [self.turn.heldDice addDices:tmp];
     XCTAssertTrue(self.turn.canStopTurn);
 };
 
 - (void)testRoll5_5_heldDice{
     NSArray *tmp =@[@1, @2, @2, @2, @5];
-   [self.turn addDicesToHeldDice:tmp];
+    [self.turn.heldDice addDices:tmp];
     XCTAssertFalse(self.turn.canStopTurn);
 };
 

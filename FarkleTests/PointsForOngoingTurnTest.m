@@ -24,13 +24,13 @@
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
-    [self.turn removeAllDicesFromHeldDice];
+    [self.turn.heldDice removeAllDice];
 }
 
-- (void)testOngoingRoundPoints {
-    [self.turn addDicesToHeldDice:@[@1, @2, @3, @4, @5]];
+- (void)tstOngoingRoundPoints {
+    [self.turn.heldDice addDices:@[@1, @2, @3, @4, @5]];
     [self.turn rollDice];
-    [self.turn addDicesToHeldDice:@[@1, @1, @5]];
+    [self.turn.heldDice addDices:@[@1, @1, @5]];
     [self.turn rollDice];
 
     XCTAssertEqual(1500 + 250, self.turn.pointsForTurn);
