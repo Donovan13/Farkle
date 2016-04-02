@@ -31,6 +31,6 @@
 -(BOOL) isFiveOfAKindWithNumber:(NSNumber *) number;
 -(BOOL) isThreeOfAKindWithNumber:(NSNumber *) number;
 -(BOOL) isStraightWithNumber:(NSNumber *) number;
--(BOOL) isSingleDiceScoringWithNumber:(NSNumber *) number;
+-(BOOL) isSingleScoringDiceWithNumber:(NSNumber *) number;
 
 @end

@@ -93,7 +93,7 @@ comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return 
     return [self isStraight] && [self containsObject:number];
 }
 
--(BOOL) isSingleDiceScoringWithNumber:(NSNumber *) number{
+-(BOOL) isSingleScoringDiceWithNumber:(NSNumber *) number{
     return [number integerValue] == 5 || [number integerValue] == 1;
 }
 
