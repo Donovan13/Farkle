@@ -7,16 +7,17 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Turn.h"
 
 @interface CanMoveFromRolledDiceToHeldDiceTest : XCTestCase
-
+@property Turn *turn;
 @end
 
 @implementation CanMoveFromRolledDiceToHeldDiceTest
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.turn = [Turn new];
 }
 
 - (void)tearDown {
@@ -24,16 +25,51 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+-(void) testCanMoveRolledToHeld_ScoringDice {
+    NSArray *tmp =@[@1, @5];
+    [self.turn.rolledDice addDices:tmp];
+
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@5]);
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@1]);
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@1]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void) testCanMoveRolledToHeld_NonScoringDice {
+    NSArray *tmp =@[@2, @4];
+    [self.turn.rolledDice addDices:tmp];
+
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@2]);
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@4]);
 }
 
+-(void) testCanMoveRolledToHeld_ThreeKind{
+    NSArray *tmp =@[@6, @6, @6, @3, @4];
+    [self.turn.rolledDice addDices:tmp];
+
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@6]);
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@4]);
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@3]);
+}
+
+-(void) testCanMoveRolledToHeld_Straight{
+    NSArray *tmp =@[@1, @2, @3, @4, @5];
+    [self.turn.rolledDice addDices:tmp];
+
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@1]);
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@2]);
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@3]);
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@4]);
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@5]);
+}
+
+-(void) testCanMoveRolledToHeld_StraightAlmost{
+    NSArray *tmp =@[@6, @2, @3, @4, @1];
+    [self.turn.rolledDice addDices:tmp];
+
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@6]);
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@2]);
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@3]);
+    XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@4]);
+    XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@1]);
+}
 @end

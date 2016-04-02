@@ -12,7 +12,6 @@
 
 @interface Turn:NSObject <TurnState>
 
-// states
 @property id <TurnState> state;
 @property id <TurnState> roll1State;
 @property id <TurnState> roll2State;
@@ -27,6 +26,7 @@
 
 -(BOOL) canStopTurn;
 -(BOOL) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice;
+-(void) moveFromRolledDiceToHeldDice:(NSNumber *)dice;
 -(void) copyHeldDiceToBankedDice;
 
 @end

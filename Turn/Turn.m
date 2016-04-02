@@ -37,19 +37,17 @@
 }
 
 #pragma mark - public methods
+-(void) moveFromRolledDiceToHeldDice:(NSNumber *)dice {
+
+}
+
 -(BOOL) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice {
-    NSUInteger intDice = [dice unsignedIntegerValue];
-    if (intDice == 1 || intDice == 5) {
-        return YES;
-    } else if (YES) {
-        // TODO: implement me
-        // rolled dice straight containing number
-        // or
-        // rolled dice 3 of a kind containing number
-        return YES;
-    } else {
-        return NO;
-    }
+    assert([self.rolledDice countForObject:dice] > 0);
+    if      ([self.rolledDice isSingleScoringDiceWithNumber:dice]) { return YES; }
+    else if ([self.rolledDice isFiveOfAKindWithNumber:dice]) { return YES; }
+    else if ([self.rolledDice isThreeOfAKindWithNumber:dice]) { return YES; }
+    else if ([self.rolledDice isStraightWithNumber:dice]) { return YES; }
+    else { return NO; }
 }
 
 -(void) copyHeldDiceToBankedDice {

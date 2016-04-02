@@ -15,6 +15,15 @@
 		09A85FDA1CA473FB00C7F3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */; };
 		09A85FE31CA4755B00C7F3C8 /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A85FE21CA4755B00C7F3C8 /* DieLabel.m */; };
 		680B84241CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */; };
+		68422E8B1CAB3DD400FBD05E /* Roll1State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66751CA734F10010D421 /* Roll1State.m */; };
+		68422E8C1CAB3DD800FBD05E /* Roll2State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66721CA734D30010D421 /* Roll2State.m */; };
+		68422E8D1CAB3DE400FBD05E /* Roll3State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA666F1CA734A70010D421 /* Roll3State.m */; };
+		68422E8E1CAB3DE700FBD05E /* Roll4State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA666C1CA734370010D421 /* Roll4State.m */; };
+		68422E8F1CAB3DEA00FBD05E /* Roll5State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66661CA732D70010D421 /* Roll5State.m */; };
+		68422E901CAB3DEE00FBD05E /* RollState.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA667B1CA739590010D421 /* RollState.m */; };
+		68422E911CAB3E2D00FBD05E /* SingleDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66781CA7357E0010D421 /* SingleDice.m */; };
+		68422E921CAB3E3000FBD05E /* Turn.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66601CA727540010D421 /* Turn.m */; };
+		68422E931CAB3E3400FBD05E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66591CA7161A0010D421 /* Game.m */; };
 		68AA66571CA712100010D421 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66561CA712100010D421 /* Player.m */; };
 		68AA665A1CA7161A0010D421 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66591CA7161A0010D421 /* Game.m */; };
 		68AA66611CA727540010D421 /* Turn.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66601CA727540010D421 /* Turn.m */; };
@@ -255,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = Id Raja;
+				ORGANIZATIONNAME = IdRaja;
 				TargetAttributes = {
 					09A85FC61CA473FB00C7F3C8 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -263,7 +272,6 @@
 					};
 					68AA66801CA743600010D421 = {
 						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 09A85FC61CA473FB00C7F3C8;
 					};
 				};
 			};
@@ -332,9 +340,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68422E931CAB3E3400FBD05E /* Game.m in Sources */,
 				68AA66A21CA792140010D421 /* TurnStateChangeTests.m in Sources */,
+				68422E911CAB3E2D00FBD05E /* SingleDice.m in Sources */,
+				68422E8E1CAB3DE700FBD05E /* Roll4State.m in Sources */,
 				68AA66841CA743600010D421 /* CanStopTurnTests.m in Sources */,
+				68422E8D1CAB3DE400FBD05E /* Roll3State.m in Sources */,
 				68AA66A91CA855760010D421 /* NSCountedSet+Dice.m in Sources */,
+				68422E8C1CAB3DD800FBD05E /* Roll2State.m in Sources */,
+				68422E8F1CAB3DEA00FBD05E /* Roll5State.m in Sources */,
+				68422E921CAB3E3000FBD05E /* Turn.m in Sources */,
+				68422E8B1CAB3DD400FBD05E /* Roll1State.m in Sources */,
+				68422E901CAB3DEE00FBD05E /* RollState.m in Sources */,
 				68AA66A41CA81A950010D421 /* PointsForHeldDiceTest.m in Sources */,
 				68AA66A61CA831BC0010D421 /* PointsForOngoingTurnTest.m in Sources */,
 				680B84241CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */,
@@ -480,28 +497,24 @@
 		68AA66891CA743610010D421 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = FarkleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.idrisr.FarkleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Farkle.app/Farkle";
 			};
 			name = Debug;
 		};
 		68AA668A1CA743610010D421 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = FarkleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.idrisr.FarkleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Farkle.app/Farkle";
 			};
 			name = Release;
 		};
