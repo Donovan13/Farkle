@@ -8,6 +8,10 @@
 
 #import "NSCountedSet+Dice.h"
 
+typedef BOOL (^comparisonType)(NSUInteger, NSUInteger);
+comparisonType equalTo = ^BOOL(NSUInteger x, NSUInteger y) {return x == y;};
+comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return x >= y;};
+
 @implementation NSCountedSet (Dice)
 
 -(NSUInteger) diceCount {
@@ -61,37 +65,47 @@
     return [self isFiveOfAKind] && [[self whichFiveOfAKind] integerValue]==1;
 }
 
--(BOOL) isThreeOfAKind { return ![[self whichValueRepeatedForCount:@3 greaterThanOrEqual:@"greater"] isEqual: @-1]; }
--(BOOL) isFiveOfAKind  { return ![[self whichValueRepeatedForCount:@5 greaterThanOrEqual:@"equal"] isEqual: @-1]; }
+-(BOOL) isThreeOfAKind {
+    return [[self whichValueRepeatedForCount:@3 forComparisonType:greaterThanOrEqualTo] intValue] != -1;
+}
 
--(NSNumber *) whichThreeOfAKind { return [self whichValueRepeatedForCount:@3 greaterThanOrEqual:@"greater"]; }
--(NSNumber *) whichFiveOfAKind  { return [self whichValueRepeatedForCount:@5 greaterThanOrEqual:@"equal"]; }
+-(BOOL) isFiveOfAKind  {
+    return [[self whichValueRepeatedForCount:@5 forComparisonType:equalTo] intValue] != -1;
+}
+
+-(BOOL) isFiveOfAKindWithNumber:(NSNumber *) number {
+    return [self whichValueRepeatedForCount:@5 forComparisonType:equalTo] == number;
+}
+
+-(BOOL) isThreeOfAKindWithNumber:(NSNumber *) number {
+    return [self whichValueRepeatedForCount:@3 forComparisonType:greaterThanOrEqualTo] == number;
+}
+
+-(NSNumber *) whichThreeOfAKind {
+    return [self whichValueRepeatedForCount:@3 forComparisonType:greaterThanOrEqualTo];
+}
+
+-(NSNumber *) whichFiveOfAKind  {
+    return [self whichValueRepeatedForCount:@5 forComparisonType:equalTo];
+}
+
+-(BOOL) isStraightWithNumber:(NSNumber *) number{
+    return [self isStraight] && [self containsObject:number];
+}
+
+-(BOOL) isSingleDiceScoringWithNumber:(NSNumber *) number{
+    return [number integerValue] == 5 || [number integerValue] == 1;
+}
 
 -(NSNumber *)whichValueRepeatedForCount:(NSNumber *)count
-                     greaterThanOrEqual:(NSString *)comparison{
-    // todo: ugly. NSComparator? blocks?
-    if ([comparison isEqualToString:@"equal"]){
-        for (NSNumber *dice in self) {
-            if ([self countForObject:dice] == [count integerValue]) {
-                return dice;
-            }
+                     forComparisonType:(comparisonType) comparison {
+    for (NSNumber *dice in self) {
+        if (comparison([self countForObject:dice], [count intValue])) {
+            return dice;
         }
-        return @-1;
-    } else if ([comparison isEqualToString:@"greater"]){
-        for (NSNumber *dice in self) {
-            if ([self countForObject:dice] >= [count integerValue]) {
-                return dice;
-            }
-        }
-        return @-1;
     }
     return @-1;
 }
-
--(NSNumber *) lowNumberForStraight {
-    return @-1;
-}
-
 
 -(void) addDices:(NSArray<NSNumber *> *) dices {
     for (NSNumber *dice in dices) {
@@ -109,7 +123,6 @@
     for (NSNumber *dice in self) {
         [string stringByAppendingFormat:@"%@", dice];
     }
-    return @"wtf";
     return string;
 }
 
