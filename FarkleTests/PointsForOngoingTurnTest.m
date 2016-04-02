@@ -3,7 +3,7 @@
 //  Farkle
 //
 //  Created by id on 3/27/16.
-//  Copyright © 2016 Kyle. All rights reserved.
+//  Copyright © 2016 Id Raja. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

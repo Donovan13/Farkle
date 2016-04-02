@@ -2,8 +2,8 @@
 //  ViewController.h
 //  Farkle
 //
-//  Created by Kyle on 3/24/16.
-//  Copyright © 2016 Kyle. All rights reserved.
+//  Created by Id Raja on 3/24/16.
+//  Copyright © 2016 Id Raja. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
