@@ -66,14 +66,6 @@
 }
 
 #pragma mark - private methods
--(BOOL) isStraightForDice:(NSCountedSet *)dices {
-    BOOL has2Thru5 = [dices containsObject:@2] && [dices containsObject:@3] &&
-                     [dices containsObject:@4] && [dices containsObject:@5];
-    BOOL has1 = [dices containsObject:@1];
-    BOOL has6 = [dices containsObject:@6];
-    return (has2Thru5 && has1) || (has2Thru5 && has6);
-}
-
 
 #pragma mark - <TurnState>
 -(BOOL) canStopTurn  { return [self.state canStopTurn]; }
