@@ -18,6 +18,7 @@
 		68235E541CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */; };
 		68235E561CB08A35007BD3C7 /* NSCountedSetCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */; };
 		68235E581CB0984D007BD3C7 /* CanRollAgainInTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */; };
+		68235E5C1CB0ADE9007BD3C7 /* PlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E5B1CB0ADE9007BD3C7 /* PlayerTests.m */; };
 		68422E8B1CAB3DD400FBD05E /* Roll1State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66751CA734F10010D421 /* Roll1State.m */; };
 		68422E8C1CAB3DD800FBD05E /* Roll2State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66721CA734D30010D421 /* Roll2State.m */; };
 		68422E8D1CAB3DE400FBD05E /* Roll3State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA666F1CA734A70010D421 /* Roll3State.m */; };
@@ -70,7 +71,8 @@
 		680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanMoveFromRolledDiceToHeldDiceTest.m; sourceTree = "<group>"; };
 		68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveFromRolledDiceToHeldDice.m; sourceTree = "<group>"; };
 		68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCountedSetCategoryTests.m; sourceTree = "<group>"; };
-		68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanRollAgainInTurnTest.m; path = ../Turn/CanRollAgainInTurnTest.m; sourceTree = "<group>"; };
+		68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanRollAgainInTurnTest.m; sourceTree = "<group>"; };
+		68235E5B1CB0ADE9007BD3C7 /* PlayerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTests.m; sourceTree = "<group>"; };
 		68AA66551CA712100010D421 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		68AA66561CA712100010D421 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		68AA66581CA7161A0010D421 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -93,7 +95,6 @@
 		68AA667B1CA739590010D421 /* RollState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollState.m; sourceTree = "<group>"; };
 		68AA66811CA743600010D421 /* FarkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AA66831CA743600010D421 /* CanStopTurnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanStopTurnTests.m; sourceTree = "<group>"; };
-		68AA66851CA743600010D421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../FarkleTests/Info.plist; sourceTree = "<group>"; };
 		68AA66A11CA792140010D421 /* TurnStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnStateChangeTests.m; sourceTree = "<group>"; };
 		68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsForHeldDiceTest.m; sourceTree = "<group>"; };
 		68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsForOngoingTurnTest.m; sourceTree = "<group>"; };
@@ -140,6 +141,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		68235E591CB0ADCA007BD3C7 /* TurnTests */ = {
+			isa = PBXGroup;
+			children = (
+				680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */,
+				68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */,
+				68AA66831CA743600010D421 /* CanStopTurnTests.m */,
+				68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */,
+				68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */,
+				68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */,
+				68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */,
+				68AA66A11CA792140010D421 /* TurnStateChangeTests.m */,
+			);
+			path = TurnTests;
+			sourceTree = "<group>";
+		};
+		68235E5A1CB0ADD7007BD3C7 /* PlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				68235E5B1CB0ADE9007BD3C7 /* PlayerTests.m */,
+			);
+			path = PlayerTests;
+			sourceTree = "<group>";
+		};
 		684FEF301CA5AF4D00E27DD0 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +201,6 @@
 		684FEF331CA5AF5E00E27DD0 /* support */ = {
 			isa = PBXGroup;
 			children = (
-				68AA66851CA743600010D421 /* Info.plist */,
 				09A85FCD1CA473FB00C7F3C8 /* AppDelegate.h */,
 				09A85FCE1CA473FB00C7F3C8 /* AppDelegate.m */,
 				09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */,
@@ -207,21 +230,14 @@
 				68AA665F1CA727540010D421 /* Turn.h */,
 				68AA66601CA727540010D421 /* Turn.m */,
 			);
-			name = Turn;
-			path = ../Turn;
+			path = Turn;
 			sourceTree = "<group>";
 		};
 		68AA66821CA743600010D421 /* FarkleTests */ = {
 			isa = PBXGroup;
 			children = (
-				68AA66831CA743600010D421 /* CanStopTurnTests.m */,
-				68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */,
-				68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */,
-				68AA66A11CA792140010D421 /* TurnStateChangeTests.m */,
-				680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */,
-				68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */,
-				68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */,
-				68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */,
+				68235E5A1CB0ADD7007BD3C7 /* PlayerTests */,
+				68235E591CB0ADCA007BD3C7 /* TurnTests */,
 			);
 			path = FarkleTests;
 			sourceTree = "<group>";
@@ -349,6 +365,7 @@
 			files = (
 				68235E541CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m in Sources */,
 				68422E931CAB3E3400FBD05E /* Game.m in Sources */,
+				68235E5C1CB0ADE9007BD3C7 /* PlayerTests.m in Sources */,
 				68235E561CB08A35007BD3C7 /* NSCountedSetCategoryTests.m in Sources */,
 				68AA66A21CA792140010D421 /* TurnStateChangeTests.m in Sources */,
 				68422E911CAB3E2D00FBD05E /* SingleDice.m in Sources */,

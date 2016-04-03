@@ -11,21 +11,22 @@
 
 @implementation Player
 
+-(instancetype)initWithName:(NSString *) name {
+    self = [super init];
+    if (self) {
+        _name = name;
+    }
+    return self;
+}
+
+
 -(void)startNewTurn {
     // get a turn object
     Turn *turn = [Turn new];
 
     // roll the dice
     [turn rollDice];
-
-    // decide which dice to bank
-    // something like
-//    if ([turn canMoveDiceToHeldDice:dice ]) {
-//    }
-
-
-    // keep going until turn is over
-    // add points to the total
+    // stop
 }
 
 
