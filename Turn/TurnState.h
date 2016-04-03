@@ -14,6 +14,7 @@
 
 -(BOOL) isTurnOver;
 -(BOOL) canStopTurn;
+-(BOOL) canRollDice;
 
 // events that transition between states
 -(void) rollDice;

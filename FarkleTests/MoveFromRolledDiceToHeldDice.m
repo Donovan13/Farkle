@@ -26,24 +26,18 @@
     [super tearDown];
 }
 
--(void) DISABLED_CombiningHeldAndRolled {
+-(void) testCombiningHeldAndRolled {
     NSArray *tmp =@[@6, @6, @6];
     [self.turn.rolledDice addDices:tmp];
-
     [self.turn.heldDice addDices:@[@2, @2]];
-
     NSCountedSet *comboSet = [self.turn.heldDice setByAddingSet:self.turn.rolledDice];
-    XCTAssertTrue(comboSet.count == 5, @"wtf%@", [comboSet myDescription]);
+    XCTAssertTrue(comboSet.diceCount == 5, @"%@", [comboSet myDescription]);
 }
 
-- (void)DISABLED_MoveThreeOfAKind {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-
+- (void)testMoveThreeOfAKind {
     NSArray *tmp =@[@2, @3, @6, @6, @6];
     [self.turn.rolledDice addDices:tmp];
     [self.turn moveFromRolledDiceToHeldDice:@6];
-
     XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@6]);
 }
 

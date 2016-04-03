@@ -39,18 +39,20 @@
 
 #pragma mark - public methods
 -(void) moveFromRolledDiceToHeldDice:(NSNumber *)dice {
-
+    if ([self canMoveFromRolledDiceToHeldDice:dice]) {
+        [self.rolledDice removeDice:dice];
+        [self.heldDice addDice:dice];
+    }
 }
 
 -(BOOL) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice {
-    NSCountedSet *combinedSet = [self.heldDice setByAddingSet:self.rolledDice];
-    NSLog(@"%@", combinedSet.myDescription);
+    NSCountedSet *combinedDice = [self.heldDice setByAddingSet:self.rolledDice];
 
     assert([self.rolledDice countForObject:dice] > 0);
-    if      ([self.rolledDice isSingleScoringDiceWithNumber:dice]) { return YES; }
-    else if ([self.rolledDice isFiveOfAKindWithNumber:dice]) { return YES; }
-    else if ([self.rolledDice isThreeOfAKindWithNumber:dice]) { return YES; }
-    else if ([self.rolledDice isStraightWithNumber:dice]) { return YES; }
+    if      ([combinedDice isSingleScoringDiceWithNumber:dice]) { return YES; }
+    else if ([combinedDice isFiveOfAKindWithNumber:dice]) { return YES; }
+    else if ([combinedDice isThreeOfAKindWithNumber:dice]) { return YES; }
+    else if ([combinedDice isStraightWithNumber:dice]) { return YES; }
     else { return NO; }
 }
 
@@ -64,13 +66,17 @@
 
 -(NSString *) description {
     return [NSString stringWithFormat:@"Banked: %@\nRolled:%@\nHeld:%@\nPoints:%li",
-            self.bankedDice, self.rolledDice, self.heldDice, self.pointsForTurn];
+            self.bankedDice.myDescription,
+            self.rolledDice.myDescription,
+            self.heldDice.myDescription,
+            self.pointsForTurn];
 }
 
 #pragma mark - private methods
 
 #pragma mark - <TurnState>
 -(BOOL) canStopTurn  { return [self.state canStopTurn]; }
+-(BOOL) canRollDice { return [self.state canRollDice]; }
 -(BOOL) isTurnOver { return [self.state isTurnOver]; }
 -(void) rollDice { [self.state rollDice]; }
 -(void) stay { [self.state stay]; }

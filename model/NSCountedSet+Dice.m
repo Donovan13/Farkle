@@ -121,7 +121,7 @@ comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return 
 -(NSString *) myDescription {
     NSString *string = @"";
     for (NSNumber *dice in self) {
-        string = [string stringByAppendingFormat:@"Dice:%@X:%li\n", dice, [self countForObject:dice]];
+        string = [string stringByAppendingFormat:@"D%@-%li\t", dice, [self countForObject:dice]];
     }
     return string;
 }

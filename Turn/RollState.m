@@ -75,4 +75,9 @@
     return NO;
 }
 
+-(BOOL) canRollDice {
+    // must be some scoring die combination in held dice to roll again
+    return self.turnContext.heldDice.points > 0;
+}
+
 @end
