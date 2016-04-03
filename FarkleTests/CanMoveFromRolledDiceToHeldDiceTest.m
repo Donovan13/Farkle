@@ -65,11 +65,11 @@
 -(void) testCanMoveRolledToHeld_StraightAlmost{
     NSArray *tmp =@[@6, @2, @3, @4, @1];
     [self.turn.rolledDice addDices:tmp];
-
     XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@6]);
     XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@2]);
     XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@3]);
     XCTAssertFalse([self.turn canMoveFromRolledDiceToHeldDice:@4]);
     XCTAssertTrue([self.turn canMoveFromRolledDiceToHeldDice:@1]);
 }
+
 @end

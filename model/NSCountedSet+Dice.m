@@ -14,13 +14,16 @@ comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return 
 
 @implementation NSCountedSet (Dice)
 
+#pragma mark - public methods
 -(NSUInteger) diceCount {
-    NSUInteger count = 0;
-    NSArray *tmp = [self allObjects];
-    for (NSNumber *num in tmp) {
-        count += [self countForObject:num];
-    }
-    return count;
+    return [[self arrayFromSet] count];
+}
+
+-(NSCountedSet *) setByAddingSet:(NSCountedSet *)set {
+    NSArray *array1 = [self arrayFromSet];
+    NSArray *array2 = [set arrayFromSet];
+    NSArray *comboArray = [array1 arrayByAddingObjectsFromArray:array2];
+    return [[NSCountedSet alloc] initWithArray:comboArray];
 }
 
 -(NSUInteger) points {
@@ -57,28 +60,20 @@ comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return 
     return (has2Thru5 && has1) || (has2Thru5 && has6);
 }
 
--(BOOL) isThreeOfAKindWithOne {
-    return [self isThreeOfAKind] && [[self whichThreeOfAKind] integerValue]==1;
-}
-
--(BOOL) isFiveOfAKindWithOne {
-    return [self isFiveOfAKind] && [[self whichFiveOfAKind] integerValue]==1;
-}
-
 -(BOOL) isThreeOfAKind {
     return [[self whichValueRepeatedForCount:@3 forComparisonType:greaterThanOrEqualTo] intValue] != -1;
+}
+
+-(BOOL) isThreeOfAKindWithOne {
+    return [self isThreeOfAKind] && [[self whichThreeOfAKind] integerValue]==1;
 }
 
 -(BOOL) isFiveOfAKind  {
     return [[self whichValueRepeatedForCount:@5 forComparisonType:equalTo] intValue] != -1;
 }
 
--(BOOL) isFiveOfAKindWithNumber:(NSNumber *) number {
-    return [self whichValueRepeatedForCount:@5 forComparisonType:equalTo] == number;
-}
-
--(BOOL) isThreeOfAKindWithNumber:(NSNumber *) number {
-    return [self whichValueRepeatedForCount:@3 forComparisonType:greaterThanOrEqualTo] == number;
+-(BOOL) isFiveOfAKindWithOne {
+    return [self isFiveOfAKind] && [[self whichFiveOfAKind] integerValue]==1;
 }
 
 -(NSNumber *) whichThreeOfAKind {
@@ -89,12 +84,60 @@ comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return 
     return [self whichValueRepeatedForCount:@5 forComparisonType:equalTo];
 }
 
+-(void) addDice:(NSNumber *) dice {
+    [self addObject:dice];
+}
+
+-(void) addDices:(NSArray<NSNumber *> *) dices {
+    for (NSNumber *dice in dices) {
+        [self addDice:dice];
+    }
+}
+
+-(void) removeDice:(NSNumber *) dice {
+    [self removeObject:dice];
+}
+
+-(void) removeAllDice {
+    [self removeAllObjects];
+}
+
+-(BOOL) isFiveOfAKindWithNumber:(NSNumber *) number {
+    return [self whichValueRepeatedForCount:@5 forComparisonType:equalTo] == number;
+}
+
+-(BOOL) isThreeOfAKindWithNumber:(NSNumber *) number {
+    return [self whichValueRepeatedForCount:@3 forComparisonType:greaterThanOrEqualTo] == number;
+}
+
 -(BOOL) isStraightWithNumber:(NSNumber *) number{
     return [self isStraight] && [self containsObject:number];
 }
 
 -(BOOL) isSingleScoringDiceWithNumber:(NSNumber *) number{
     return [number integerValue] == 5 || [number integerValue] == 1;
+}
+
+-(NSString *) myDescription {
+    NSString *string = @"";
+    for (NSNumber *dice in self) {
+        string = [string stringByAppendingFormat:@"Dice:%@X:%li\n", dice, [self countForObject:dice]];
+    }
+    return string;
+}
+
+#pragma mark - private methods
+-(NSArray *) arrayFromSet {
+    NSArray *tmp = [self allObjects];
+    NSMutableArray *mutTmp = [NSMutableArray new];
+    long count = 0;
+    for (NSNumber *num in tmp) {
+        count = [self countForObject:num];
+        for (int i = 0; i < count; i++) {
+            [mutTmp addObject:num];
+        }
+    }
+    return [NSArray arrayWithArray:mutTmp];
 }
 
 -(NSNumber *)whichValueRepeatedForCount:(NSNumber *)count
@@ -105,25 +148,6 @@ comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return 
         }
     }
     return @-1;
-}
-
--(void) addDices:(NSArray<NSNumber *> *) dices {
-    for (NSNumber *dice in dices) {
-        [self addDice:dice];
-    }
-}
-
--(void) addDice:(NSNumber *) dice { [self addObject:dice]; }
--(void) removeDice:(NSNumber *) dice { [self removeObject:dice]; }
--(void) removeAllDice { [self removeAllObjects]; }
-
--(NSString *) description {
-    NSString *string = @"";
-    NSLog(@"%@", self);
-    for (NSNumber *dice in self) {
-        [string stringByAppendingFormat:@"%@", dice];
-    }
-    return string;
 }
 
 @end

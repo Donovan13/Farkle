@@ -11,6 +11,7 @@
 #import "Roll3State.h"
 #import "Roll2State.h"
 #import "Roll1State.h"
+//#import "NSCountedSet+Dice.h"
 
 @interface Turn()
 @property NSUInteger round;
@@ -42,6 +43,9 @@
 }
 
 -(BOOL) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice {
+    NSCountedSet *combinedSet = [self.heldDice setByAddingSet:self.rolledDice];
+    NSLog(@"%@", combinedSet.myDescription);
+
     assert([self.rolledDice countForObject:dice] > 0);
     if      ([self.rolledDice isSingleScoringDiceWithNumber:dice]) { return YES; }
     else if ([self.rolledDice isFiveOfAKindWithNumber:dice]) { return YES; }
