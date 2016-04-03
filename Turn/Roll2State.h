@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TurnState.h"
 #import "RollState.h"
 
 @interface Roll2State : RollState <TurnState>

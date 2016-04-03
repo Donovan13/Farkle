@@ -5,6 +5,7 @@
 //  Copyright © 2016 Id Raja. All rights reserved.
 //
 
+#import "Player.h"
 #import "Turn.h"
 #import "Roll5State.h"
 #import "Roll4State.h"

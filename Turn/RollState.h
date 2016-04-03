@@ -6,9 +6,8 @@
 //  Copyright © 2016 Id Raja. All rights reserved.
 //
 
-#import "Turn.h"
-#import "TurnState.h"
 #import <Foundation/Foundation.h>
+#import "Turn.h"
 
 @interface RollState : NSObject <TurnState>
 @property Turn *turnContext;

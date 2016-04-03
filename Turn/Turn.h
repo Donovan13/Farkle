@@ -7,8 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TurnState.h"
 #import "NSCountedSet+Dice.h"
+@class Player;
+
+@protocol TurnState <NSObject>
+@required
+
+-(BOOL) isTurnOver;
+-(BOOL) canStopTurn;
+-(BOOL) canRollDice;
+
+// events that transition between states
+-(void) rollDice;
+-(void) stay;
+//
+
+@optional
+-(instancetype) initContextWithPlayer:(Player *) player;
+@end
 
 @interface Turn:NSObject <TurnState>
 
