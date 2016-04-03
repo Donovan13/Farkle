@@ -1,6 +1,6 @@
 //
 //  PointsForHeldDiceTest.m
-//  Farkle
+//  Zonk
 //
 //  Created by id on 3/27/16.
 //  Copyright © 2016 Id Raja. All rights reserved.

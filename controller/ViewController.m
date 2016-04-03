@@ -1,19 +1,17 @@
 //
 //  ViewController.m
-//  Farkle
+//  Zonk
 //
 //  Created by Id Raja on 3/24/16.
 //  Copyright © 2016 Id Raja. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "DieLabel.h"
 #import "NSCountedSet+Dice.h"
+#import "Game.h"
 
-@interface ViewController ()<DieLabelDelegate>
-
-@property (strong, nonatomic) IBOutletCollection(DieLabel) NSArray *dieLabels;
-@property NSMutableArray<DieLabel*> *heldDice;
+@interface ViewController ()
+@property (strong, nonatomic) Game *game;
 @end
 
 @implementation ViewController
@@ -21,53 +19,28 @@
 #pragma mark - view life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.heldDice = [NSMutableArray new];
-    for (DieLabel *dieLabel in self.dieLabels) {
-        dieLabel.delegate = self;
-    }
+    self.game = [Game new];
 }
 
 #pragma mark - IBActions
-- (IBAction)onRollButtonPressed:(UIButton *)sender {
-    NSArray *unrolled = [self inArray:self.dieLabels andNotInArray:self.heldDice];
-    for (DieLabel *dieLabel in unrolled) {
-        [dieLabel dieRoll];
+- (IBAction)rollButtonPressed:(UIButton *)sender {
+    if ([self.game canRoll]) {
+        [self.game roll];
     }
 }
 
-#pragma mark - DieLabelDelegate
--(void) didSelectDie:(DieLabel *) dieLabel {
-    [self.heldDice addObject:dieLabel];
-    [self moveDieToHeldArea:dieLabel];
+- (IBAction)stopTurnButtonPressed:(UIButton *)sender {
+    if ([self.game canStopTurn]) {
+        [self.game stopTurn];
+    }
 }
 
--(void) moveDieToHeldArea:(DieLabel *) dieLabel {
-    CGPoint newCenter = [self pointForNextEmptyHeldDieArea];
-
-    [UIView animateWithDuration:0.5
-                     animations:^{ dieLabel.center = newCenter; }
-                     completion:^(BOOL finished) {
-                         [self.view removeConstraints:dieLabel.constraints];
-                     }];
+-(void) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice {
+    if ([self.game canMoveFromRolledDiceToHeldDice:dice]) {
+        [self.game canMoveFromRolledDiceToHeldDice:dice];
+    }
 }
 
-#pragma mark - private methods
--(NSArray *) inArray:(NSArray *)array1
-       andNotInArray:(NSArray *)array2 {
-    NSMutableArray *newArray = [NSMutableArray arrayWithArray:array1];
-    [newArray removeObjectsInArray:array2];
-    return newArray;;
-}
-
--(CGPoint) pointForNextEmptyHeldDieArea {
-    CGFloat yOffsetFromTop = 100;
-    CGFloat width = self.view.frame.size.width;
-    CGFloat xDivider = width / (self.dieLabels.count + 1);
-    long heldDie = self.heldDice.count;
-
-    CGFloat xOffsetFromRight = xDivider * heldDie;
-    CGPoint heldDieCenter = CGPointMake(xOffsetFromRight, yOffsetFromTop);
-    return heldDieCenter;
-}
+-(void) setDiceValue { }
 
 @end

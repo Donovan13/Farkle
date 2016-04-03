@@ -1,6 +1,6 @@
 //
 //  MoveFromRolledDiceToHeldDice.m
-//  Farkle
+//  Zonk
 //
 //  Created by id on 4/2/16.
 //  Copyright © 2016 IdRaja. All rights reserved.

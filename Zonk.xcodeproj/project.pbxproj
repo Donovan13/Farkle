@@ -13,7 +13,6 @@
 		09A85FD51CA473FB00C7F3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD31CA473FB00C7F3C8 /* Main.storyboard */; };
 		09A85FD71CA473FB00C7F3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */; };
 		09A85FDA1CA473FB00C7F3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */; };
-		09A85FE31CA4755B00C7F3C8 /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A85FE21CA4755B00C7F3C8 /* DieLabel.m */; };
 		680B84241CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */; };
 		68235E541CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */; };
 		68235E561CB08A35007BD3C7 /* NSCountedSetCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */; };
@@ -43,6 +42,7 @@
 		68AA66A41CA81A950010D421 /* PointsForHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */; };
 		68AA66A61CA831BC0010D421 /* PointsForOngoingTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */; };
 		68AA66A91CA855760010D421 /* NSCountedSet+Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */; };
+		68F583411CB0B13D000B1398 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66561CA712100010D421 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +51,12 @@
 			containerPortal = 09A85FBF1CA473FB00C7F3C8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 09A85FC61CA473FB00C7F3C8;
-			remoteInfo = Farkle;
+			remoteInfo = Zonk;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09A85FC71CA473FB00C7F3C8 /* Farkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A85FC71CA473FB00C7F3C8 /* Zonk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zonk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A85FCB1CA473FB00C7F3C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09A85FCD1CA473FB00C7F3C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09A85FCE1CA473FB00C7F3C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,8 +66,6 @@
 		09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A85FD91CA473FB00C7F3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A85FDB1CA473FB00C7F3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09A85FE11CA4755B00C7F3C8 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
-		09A85FE21CA4755B00C7F3C8 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
 		680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanMoveFromRolledDiceToHeldDiceTest.m; sourceTree = "<group>"; };
 		68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveFromRolledDiceToHeldDice.m; sourceTree = "<group>"; };
 		68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCountedSetCategoryTests.m; sourceTree = "<group>"; };
@@ -93,7 +91,7 @@
 		68AA66781CA7357E0010D421 /* SingleDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleDice.m; sourceTree = "<group>"; };
 		68AA667A1CA739590010D421 /* RollState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollState.h; sourceTree = "<group>"; };
 		68AA667B1CA739590010D421 /* RollState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollState.m; sourceTree = "<group>"; };
-		68AA66811CA743600010D421 /* FarkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68AA66811CA743600010D421 /* Zonk.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zonk.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AA66831CA743600010D421 /* CanStopTurnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanStopTurnTests.m; sourceTree = "<group>"; };
 		68AA66A11CA792140010D421 /* TurnStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnStateChangeTests.m; sourceTree = "<group>"; };
 		68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsForHeldDiceTest.m; sourceTree = "<group>"; };
@@ -123,7 +121,7 @@
 		09A85FBE1CA473FB00C7F3C8 = {
 			isa = PBXGroup;
 			children = (
-				68AA66821CA743600010D421 /* FarkleTests */,
+				68AA66821CA743600010D421 /* ZonkTests */,
 				09A85FC81CA473FB00C7F3C8 /* Products */,
 				684FEF321CA5AF5900E27DD0 /* controller */,
 				684FEF301CA5AF4D00E27DD0 /* model */,
@@ -135,8 +133,8 @@
 		09A85FC81CA473FB00C7F3C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09A85FC71CA473FB00C7F3C8 /* Farkle.app */,
-				68AA66811CA743600010D421 /* FarkleTests.xctest */,
+				09A85FC71CA473FB00C7F3C8 /* Zonk.app */,
+				68AA66811CA743600010D421 /* Zonk.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,8 +179,6 @@
 		684FEF311CA5AF5400E27DD0 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				09A85FE11CA4755B00C7F3C8 /* DieLabel.h */,
-				09A85FE21CA4755B00C7F3C8 /* DieLabel.m */,
 				09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */,
 				09A85FD31CA473FB00C7F3C8 /* Main.storyboard */,
 			);
@@ -233,21 +229,22 @@
 			path = Turn;
 			sourceTree = "<group>";
 		};
-		68AA66821CA743600010D421 /* FarkleTests */ = {
+		68AA66821CA743600010D421 /* ZonkTests */ = {
 			isa = PBXGroup;
 			children = (
 				68235E5A1CB0ADD7007BD3C7 /* PlayerTests */,
 				68235E591CB0ADCA007BD3C7 /* TurnTests */,
 			);
-			path = FarkleTests;
+			name = ZonkTests;
+			path = ZonkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		09A85FC61CA473FB00C7F3C8 /* Farkle */ = {
+		09A85FC61CA473FB00C7F3C8 /* Zonk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09A85FDE1CA473FB00C7F3C8 /* Build configuration list for PBXNativeTarget "Farkle" */;
+			buildConfigurationList = 09A85FDE1CA473FB00C7F3C8 /* Build configuration list for PBXNativeTarget "Zonk" */;
 			buildPhases = (
 				09A85FC31CA473FB00C7F3C8 /* Sources */,
 				09A85FC41CA473FB00C7F3C8 /* Frameworks */,
@@ -257,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = Farkle;
-			productName = Farkle;
-			productReference = 09A85FC71CA473FB00C7F3C8 /* Farkle.app */;
+			name = Zonk;
+			productName = Zonk;
+			productReference = 09A85FC71CA473FB00C7F3C8 /* Zonk.app */;
 			productType = "com.apple.product-type.application";
 		};
-		68AA66801CA743600010D421 /* FarkleTests */ = {
+		68AA66801CA743600010D421 /* ZonkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68AA66881CA743610010D421 /* Build configuration list for PBXNativeTarget "FarkleTests" */;
+			buildConfigurationList = 68AA66881CA743610010D421 /* Build configuration list for PBXNativeTarget "ZonkTests" */;
 			buildPhases = (
 				68AA667D1CA743600010D421 /* Sources */,
 				68AA667E1CA743600010D421 /* Frameworks */,
@@ -275,9 +272,9 @@
 			dependencies = (
 				68AA66871CA743600010D421 /* PBXTargetDependency */,
 			);
-			name = FarkleTests;
-			productName = FarkleTests;
-			productReference = 68AA66811CA743600010D421 /* FarkleTests.xctest */;
+			name = ZonkTests;
+			productName = ZonkTests;
+			productReference = 68AA66811CA743600010D421 /* Zonk.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +295,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 09A85FC21CA473FB00C7F3C8 /* Build configuration list for PBXProject "Farkle" */;
+			buildConfigurationList = 09A85FC21CA473FB00C7F3C8 /* Build configuration list for PBXProject "Zonk" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -311,8 +308,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09A85FC61CA473FB00C7F3C8 /* Farkle */,
-				68AA66801CA743600010D421 /* FarkleTests */,
+				09A85FC61CA473FB00C7F3C8 /* Zonk */,
+				68AA66801CA743600010D421 /* ZonkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,7 +351,6 @@
 				68AA665A1CA7161A0010D421 /* Game.m in Sources */,
 				68AA66701CA734A70010D421 /* Roll3State.m in Sources */,
 				68AA666D1CA734370010D421 /* Roll4State.m in Sources */,
-				09A85FE31CA4755B00C7F3C8 /* DieLabel.m in Sources */,
 				68AA66571CA712100010D421 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +363,7 @@
 				68422E931CAB3E3400FBD05E /* Game.m in Sources */,
 				68235E5C1CB0ADE9007BD3C7 /* PlayerTests.m in Sources */,
 				68235E561CB08A35007BD3C7 /* NSCountedSetCategoryTests.m in Sources */,
+				68F583411CB0B13D000B1398 /* Player.m in Sources */,
 				68AA66A21CA792140010D421 /* TurnStateChangeTests.m in Sources */,
 				68422E911CAB3E2D00FBD05E /* SingleDice.m in Sources */,
 				68422E8E1CAB3DE700FBD05E /* Roll4State.m in Sources */,
@@ -390,7 +387,7 @@
 /* Begin PBXTargetDependency section */
 		68AA66871CA743600010D421 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 09A85FC61CA473FB00C7F3C8 /* Farkle */;
+			target = 09A85FC61CA473FB00C7F3C8 /* Zonk */;
 			targetProxy = 68AA66861CA743600010D421 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -504,8 +501,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Donovan.Farkle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Donovan.Zonk;
+				PRODUCT_NAME = Zonk;
 			};
 			name = Debug;
 		};
@@ -516,8 +513,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Donovan.Farkle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Donovan.Zonk;
+				PRODUCT_NAME = Zonk;
 			};
 			name = Release;
 		};
@@ -525,11 +522,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
-				INFOPLIST_FILE = FarkleTests/Info.plist;
+				INFOPLIST_FILE = ZonkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.idrisr.FarkleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idrisr.ZonkTests;
+				PRODUCT_NAME = Zonk;
 			};
 			name = Debug;
 		};
@@ -537,18 +534,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
-				INFOPLIST_FILE = FarkleTests/Info.plist;
+				INFOPLIST_FILE = ZonkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.idrisr.FarkleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.idrisr.ZonkTests;
+				PRODUCT_NAME = Zonk;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09A85FC21CA473FB00C7F3C8 /* Build configuration list for PBXProject "Farkle" */ = {
+		09A85FC21CA473FB00C7F3C8 /* Build configuration list for PBXProject "Zonk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09A85FDC1CA473FB00C7F3C8 /* Debug */,
@@ -557,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09A85FDE1CA473FB00C7F3C8 /* Build configuration list for PBXNativeTarget "Farkle" */ = {
+		09A85FDE1CA473FB00C7F3C8 /* Build configuration list for PBXNativeTarget "Zonk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09A85FDF1CA473FB00C7F3C8 /* Debug */,
@@ -566,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68AA66881CA743610010D421 /* Build configuration list for PBXNativeTarget "FarkleTests" */ = {
+		68AA66881CA743610010D421 /* Build configuration list for PBXNativeTarget "ZonkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68AA66891CA743610010D421 /* Debug */,

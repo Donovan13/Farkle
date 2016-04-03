@@ -1,6 +1,6 @@
 //
 //  NSCountedSet+Dice.m
-//  Farkle
+//  Zonk
 //
 //  Created by id on 3/27/16.
 //  Copyright © 2016 Id Raja. All rights reserved.
@@ -148,6 +148,10 @@ comparisonType greaterThanOrEqualTo = ^BOOL(NSUInteger x, NSUInteger y) {return 
         }
     }
     return @-1;
+}
+
+-(NSNumber *) valueAtIndex:(NSInteger) index {
+    return [self arrayFromSet][index];
 }
 
 @end

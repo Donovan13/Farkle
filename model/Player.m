@@ -1,6 +1,6 @@
 //
 //  Player.m
-//  Farkle
+//  Zonk
 //
 //  Created by id on 3/26/16.
 //  Copyright © 2016 Id Raja. All rights reserved.
@@ -11,14 +11,13 @@
 
 @implementation Player
 
--(instancetype)initWithName:(NSString *) name {
+-(instancetype) init {
     self = [super init];
     if (self) {
-        _name = name;
+        _turn = [Turn new];
     }
     return self;
 }
-
 
 -(void)startNewTurn {
     // get a turn object

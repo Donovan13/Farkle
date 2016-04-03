@@ -1,6 +1,6 @@
 //
 //  Game.h
-//  Farkle
+//  Zonk
 //
 //  Created by id on 3/26/16.
 //  Copyright © 2016 Id Raja. All rights reserved.
@@ -9,14 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "Player.h"
 
-@interface Game : NSObject
+@protocol GameProtocol <NSObject>
+-(BOOL) canStopTurn;
+-(void) stopTurn;
 
-@property NSArray<Player *> *players;
-@property NSUInteger playerTurn;
+-(BOOL) canMoveFromRolledDiceToHeldDice:(NSNumber *)dice;
+-(void) moveFromRolledDiceToHeldDice:(NSNumber *)dice;
 
-// whose turn is it?
-// how many players?
-// is there a winner?
-// can player stop at this point?
+-(BOOL) canRoll;
+-(void) roll;
 
+-(BOOL) canAddPlayer;
+-(void) addPlayer;
+@end
+
+@interface Game : NSObject <GameProtocol>
+@property Player *player;
 @end

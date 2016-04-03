@@ -1,6 +1,6 @@
 //
 //  PlayerTests.m
-//  Farkle
+//  Zonk
 //
 //  Created by id on 4/2/16.
 //  Copyright © 2016 IdRaja. All rights reserved.
@@ -17,7 +17,6 @@
 
 - (void)setUp {
     [super setUp];
-    self.player = [[Player alloc]initWithName:@"Idris"];
 }
 
 - (void)tearDown {
