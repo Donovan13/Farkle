@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DiceCollectionViewCell.h"
 #import "NSCountedSet+Dice.h"
 #import "Game.h"
 #import "DiceHeaderTypeCollectionReusableView.h"
@@ -62,10 +63,27 @@ typedef NS_ENUM(NSUInteger, DiceSection) {
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *reuseID = @"cellID";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseID
+    DiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseID
                                                                            forIndexPath:indexPath];
     cell.layer.borderColor = [UIColor blueColor].CGColor;
     cell.layer.borderWidth = 2.0f;
+    NSNumber *value = nil;
+    switch (indexPath.section) {
+        case DiceSectionBanked:
+            value = [self.game.player.turn.bankedDice valueAtIndex:indexPath.row];
+            cell.label.text = [value stringValue];
+            break;
+        case DiceSectionHeld:
+            value = [self.game.player.turn.heldDice valueAtIndex:indexPath.row];
+            cell.label.text = [value stringValue];
+            break;
+        case DiceSectionRolled:
+            value = [self.game.player.turn.rolledDice valueAtIndex:indexPath.row];
+            cell.label.text = [value stringValue];
+            break;
+        default:
+            break;
+    }
     return cell;
 }
 
@@ -76,9 +94,7 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
 
 -(void) collectionView:(UICollectionView *)collectionView
    moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath
-           toIndexPath:(NSIndexPath *)destinationIndexPath {
-
-}
+           toIndexPath:(NSIndexPath *)destinationIndexPath {}
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
           viewForSupplementaryElementOfKind:(NSString *)kind
@@ -88,7 +104,7 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *reuseID;
     if (kind == UICollectionElementKindSectionHeader){
         reuseID = @"headerView";
-        DiceHeaderTypeCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+        DiceHeaderTypeCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                                               withReuseIdentifier:reuseID
                                                                                                      forIndexPath:indexPath];
         NSString *title = nil;

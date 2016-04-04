@@ -35,6 +35,7 @@
 		68AA66791CA7357E0010D421 /* SingleDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66781CA7357E0010D421 /* SingleDice.m */; };
 		68AA667C1CA739590010D421 /* RollState.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA667B1CA739590010D421 /* RollState.m */; };
 		68AA66A91CA855760010D421 /* NSCountedSet+Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */; };
+		68BD83CE1CB2117400968987 /* DiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BD83CD1CB2117400968987 /* DiceCollectionViewCell.m */; };
 		68D2577F1CB1EE7300D035FE /* NSCountedSet+Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */; };
 		68D257881CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257801CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m */; };
 		68D257891CB1F10B00D035FE /* CanRollAgainInTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257811CB1F10B00D035FE /* CanRollAgainInTurnTest.m */; };
@@ -93,6 +94,8 @@
 		68AA66811CA743600010D421 /* Zonk.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zonk.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AA66A71CA855760010D421 /* NSCountedSet+Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCountedSet+Dice.h"; sourceTree = "<group>"; };
 		68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCountedSet+Dice.m"; sourceTree = "<group>"; };
+		68BD83CC1CB2117400968987 /* DiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiceCollectionViewCell.h; path = view/DiceCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		68BD83CD1CB2117400968987 /* DiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiceCollectionViewCell.m; path = view/DiceCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		68D257801CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanMoveFromRolledDiceToHeldDiceTest.m; sourceTree = "<group>"; };
 		68D257811CB1F10B00D035FE /* CanRollAgainInTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanRollAgainInTurnTest.m; sourceTree = "<group>"; };
 		68D257821CB1F10B00D035FE /* CanStopTurnTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanStopTurnTests.m; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				68AA666C1CA734370010D421 /* Roll4State.m */,
 				68AA66651CA732D70010D421 /* Roll5State.h */,
 				68AA66661CA732D70010D421 /* Roll5State.m */,
+				68BD83CC1CB2117400968987 /* DiceCollectionViewCell.h */,
+				68BD83CD1CB2117400968987 /* DiceCollectionViewCell.m */,
 				68AA667A1CA739590010D421 /* RollState.h */,
 				68AA667B1CA739590010D421 /* RollState.m */,
 				68AA66771CA7357E0010D421 /* SingleDice.h */,
@@ -348,6 +353,7 @@
 				68AA66701CA734A70010D421 /* Roll3State.m in Sources */,
 				68AA666D1CA734370010D421 /* Roll4State.m in Sources */,
 				68AA66571CA712100010D421 /* Player.m in Sources */,
+				68BD83CE1CB2117400968987 /* DiceCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
