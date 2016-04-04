@@ -27,7 +27,7 @@
         _round = 0;
         _pointsForTurn = 0;
         _rolledDice = [NSCountedSet new];
-        _heldDice = [NSCountedSet new];
+        _heldDice =   [NSCountedSet new];
         _bankedDice = [NSCountedSet new];
         _roll1State = [[Roll1State alloc] initContextWithTurn:self];
         _roll2State = [[Roll2State alloc] initContextWithTurn:self];

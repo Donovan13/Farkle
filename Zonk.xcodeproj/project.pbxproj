@@ -13,6 +13,15 @@
 		09A85FD51CA473FB00C7F3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD31CA473FB00C7F3C8 /* Main.storyboard */; };
 		09A85FD71CA473FB00C7F3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */; };
 		09A85FDA1CA473FB00C7F3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */; };
+		6820CAF31CB1D8DE006AD5EB /* DiceHeaderTypeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAF21CB1D8DE006AD5EB /* DiceHeaderTypeCollectionReusableView.m */; };
+		6820CAF51CB1E6DA006AD5EB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6820CAF41CB1E6DA006AD5EB /* Info.plist */; };
+		6820CAFF1CB1E705006AD5EB /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAF81CB1E705006AD5EB /* CanMoveFromRolledDiceToHeldDiceTest.m */; };
+		6820CB001CB1E705006AD5EB /* CanRollAgainInTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAF91CB1E705006AD5EB /* CanRollAgainInTurnTest.m */; };
+		6820CB011CB1E705006AD5EB /* CanStopTurnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAFA1CB1E705006AD5EB /* CanStopTurnTests.m */; };
+		6820CB021CB1E705006AD5EB /* MoveFromRolledDiceToHeldDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAFB1CB1E705006AD5EB /* MoveFromRolledDiceToHeldDice.m */; };
+		6820CB031CB1E705006AD5EB /* NSCountedSetCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAFC1CB1E705006AD5EB /* NSCountedSetCategoryTests.m */; };
+		6820CB041CB1E705006AD5EB /* PointsForHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAFD1CB1E705006AD5EB /* PointsForHeldDiceTest.m */; };
+		6820CB051CB1E705006AD5EB /* PointsForOngoingTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820CAFE1CB1E705006AD5EB /* PointsForOngoingTurnTest.m */; };
 		68422E8B1CAB3DD400FBD05E /* Roll1State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66751CA734F10010D421 /* Roll1State.m */; };
 		68422E8C1CAB3DD800FBD05E /* Roll2State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66721CA734D30010D421 /* Roll2State.m */; };
 		68422E8D1CAB3DE400FBD05E /* Roll3State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA666F1CA734A70010D421 /* Roll3State.m */; };
@@ -66,6 +75,16 @@
 		09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A85FD91CA473FB00C7F3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A85FDB1CA473FB00C7F3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6820CAF11CB1D8DE006AD5EB /* DiceHeaderTypeCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceHeaderTypeCollectionReusableView.h; sourceTree = "<group>"; };
+		6820CAF21CB1D8DE006AD5EB /* DiceHeaderTypeCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiceHeaderTypeCollectionReusableView.m; sourceTree = "<group>"; };
+		6820CAF41CB1E6DA006AD5EB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6820CAF81CB1E705006AD5EB /* CanMoveFromRolledDiceToHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanMoveFromRolledDiceToHeldDiceTest.m; sourceTree = "<group>"; };
+		6820CAF91CB1E705006AD5EB /* CanRollAgainInTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanRollAgainInTurnTest.m; sourceTree = "<group>"; };
+		6820CAFA1CB1E705006AD5EB /* CanStopTurnTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanStopTurnTests.m; sourceTree = "<group>"; };
+		6820CAFB1CB1E705006AD5EB /* MoveFromRolledDiceToHeldDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveFromRolledDiceToHeldDice.m; sourceTree = "<group>"; };
+		6820CAFC1CB1E705006AD5EB /* NSCountedSetCategoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCountedSetCategoryTests.m; sourceTree = "<group>"; };
+		6820CAFD1CB1E705006AD5EB /* PointsForHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsForHeldDiceTest.m; sourceTree = "<group>"; };
+		6820CAFE1CB1E705006AD5EB /* PointsForOngoingTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsForOngoingTurnTest.m; sourceTree = "<group>"; };
 		68AA66551CA712100010D421 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		68AA66561CA712100010D421 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		68AA66581CA7161A0010D421 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -120,8 +139,8 @@
 		09A85FBE1CA473FB00C7F3C8 = {
 			isa = PBXGroup;
 			children = (
-				68AA66821CA743600010D421 /* ZonkTests */,
 				09A85FC81CA473FB00C7F3C8 /* Products */,
+				68AA66821CA743600010D421 /* ZonkTests */,
 				684FEF321CA5AF5900E27DD0 /* controller */,
 				684FEF301CA5AF4D00E27DD0 /* model */,
 				684FEF331CA5AF5E00E27DD0 /* support */,
@@ -149,6 +168,13 @@
 				68D257851CB1F10B00D035FE /* PointsForHeldDiceTest.m */,
 				68D257861CB1F10B00D035FE /* PointsForOngoingTurnTest.m */,
 				68D257871CB1F10B00D035FE /* TurnStateChangeTests.m */,
+				6820CAF81CB1E705006AD5EB /* CanMoveFromRolledDiceToHeldDiceTest.m */,
+				6820CAF91CB1E705006AD5EB /* CanRollAgainInTurnTest.m */,
+				6820CAFA1CB1E705006AD5EB /* CanStopTurnTests.m */,
+				6820CAFB1CB1E705006AD5EB /* MoveFromRolledDiceToHeldDice.m */,
+				6820CAFC1CB1E705006AD5EB /* NSCountedSetCategoryTests.m */,
+				6820CAFD1CB1E705006AD5EB /* PointsForHeldDiceTest.m */,
+				6820CAFE1CB1E705006AD5EB /* PointsForOngoingTurnTest.m */,
 			);
 			path = TurnTests;
 			sourceTree = "<group>";
@@ -170,6 +196,8 @@
 		684FEF311CA5AF5400E27DD0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				6820CAF11CB1D8DE006AD5EB /* DiceHeaderTypeCollectionReusableView.h */,
+				6820CAF21CB1D8DE006AD5EB /* DiceHeaderTypeCollectionReusableView.m */,
 				09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */,
 				09A85FD31CA473FB00C7F3C8 /* Main.storyboard */,
 			);
@@ -223,6 +251,7 @@
 		68AA66821CA743600010D421 /* ZonkTests */ = {
 			isa = PBXGroup;
 			children = (
+				6820CAF41CB1E6DA006AD5EB /* Info.plist */,
 				68235E591CB0ADCA007BD3C7 /* TurnTests */,
 			);
 			path = ZonkTests;
@@ -318,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6820CAF51CB1E6DA006AD5EB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +364,7 @@
 				68AA66791CA7357E0010D421 /* SingleDice.m in Sources */,
 				09A85FD21CA473FB00C7F3C8 /* ViewController.m in Sources */,
 				68AA66761CA734F10010D421 /* Roll1State.m in Sources */,
+				6820CAF31CB1D8DE006AD5EB /* DiceHeaderTypeCollectionReusableView.m in Sources */,
 				68AA66611CA727540010D421 /* Turn.m in Sources */,
 				68AA66731CA734D30010D421 /* Roll2State.m in Sources */,
 				09A85FCF1CA473FB00C7F3C8 /* AppDelegate.m in Sources */,
@@ -355,6 +386,14 @@
 				68F583411CB0B13D000B1398 /* Player.m in Sources */,
 				68D257881CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */,
 				68D257891CB1F10B00D035FE /* CanRollAgainInTurnTest.m in Sources */,
+				6820CB051CB1E705006AD5EB /* PointsForOngoingTurnTest.m in Sources */,
+				6820CB021CB1E705006AD5EB /* MoveFromRolledDiceToHeldDice.m in Sources */,
+				68422E931CAB3E3400FBD05E /* Game.m in Sources */,
+				6820CB041CB1E705006AD5EB /* PointsForHeldDiceTest.m in Sources */,
+				6820CB031CB1E705006AD5EB /* NSCountedSetCategoryTests.m in Sources */,
+				68F583411CB0B13D000B1398 /* Player.m in Sources */,
+				6820CAFF1CB1E705006AD5EB /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */,
+				6820CB001CB1E705006AD5EB /* CanRollAgainInTurnTest.m in Sources */,
 				68422E911CAB3E2D00FBD05E /* SingleDice.m in Sources */,
 				68422E8E1CAB3DE700FBD05E /* Roll4State.m in Sources */,
 				68422E8D1CAB3DE400FBD05E /* Roll3State.m in Sources */,
@@ -362,6 +401,7 @@
 				68AA66A91CA855760010D421 /* NSCountedSet+Dice.m in Sources */,
 				68422E8C1CAB3DD800FBD05E /* Roll2State.m in Sources */,
 				68422E8F1CAB3DEA00FBD05E /* Roll5State.m in Sources */,
+				6820CB011CB1E705006AD5EB /* CanStopTurnTests.m in Sources */,
 				68422E921CAB3E3000FBD05E /* Turn.m in Sources */,
 				68422E8B1CAB3DD400FBD05E /* Roll1State.m in Sources */,
 				68D2578F1CB1F10B00D035FE /* TurnStateChangeTests.m in Sources */,
