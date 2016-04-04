@@ -12,7 +12,7 @@
 #import "Roll3State.h"
 #import "Roll2State.h"
 #import "Roll1State.h"
-//#import "NSCountedSet+Dice.h"
+#import "NSCountedSet+Dice.h"
 
 @interface Turn()
 @property NSUInteger round;

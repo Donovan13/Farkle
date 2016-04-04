@@ -42,6 +42,7 @@
 		68AA66A41CA81A950010D421 /* PointsForHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */; };
 		68AA66A61CA831BC0010D421 /* PointsForOngoingTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */; };
 		68AA66A91CA855760010D421 /* NSCountedSet+Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */; };
+		68D2577F1CB1EE7300D035FE /* NSCountedSet+Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */; };
 		68F583411CB0B13D000B1398 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66561CA712100010D421 /* Player.m */; };
 /* End PBXBuildFile section */
 
@@ -341,6 +342,7 @@
 			files = (
 				68AA66671CA732D70010D421 /* Roll5State.m in Sources */,
 				68AA667C1CA739590010D421 /* RollState.m in Sources */,
+				68D2577F1CB1EE7300D035FE /* NSCountedSet+Dice.m in Sources */,
 				68AA66791CA7357E0010D421 /* SingleDice.m in Sources */,
 				09A85FD21CA473FB00C7F3C8 /* ViewController.m in Sources */,
 				68AA66761CA734F10010D421 /* Roll1State.m in Sources */,
