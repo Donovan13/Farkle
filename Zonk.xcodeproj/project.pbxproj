@@ -13,11 +13,6 @@
 		09A85FD51CA473FB00C7F3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD31CA473FB00C7F3C8 /* Main.storyboard */; };
 		09A85FD71CA473FB00C7F3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */; };
 		09A85FDA1CA473FB00C7F3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A85FD81CA473FB00C7F3C8 /* LaunchScreen.storyboard */; };
-		680B84241CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */; };
-		68235E541CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */; };
-		68235E561CB08A35007BD3C7 /* NSCountedSetCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */; };
-		68235E581CB0984D007BD3C7 /* CanRollAgainInTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */; };
-		68235E5C1CB0ADE9007BD3C7 /* PlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235E5B1CB0ADE9007BD3C7 /* PlayerTests.m */; };
 		68422E8B1CAB3DD400FBD05E /* Roll1State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66751CA734F10010D421 /* Roll1State.m */; };
 		68422E8C1CAB3DD800FBD05E /* Roll2State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66721CA734D30010D421 /* Roll2State.m */; };
 		68422E8D1CAB3DE400FBD05E /* Roll3State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA666F1CA734A70010D421 /* Roll3State.m */; };
@@ -37,12 +32,16 @@
 		68AA66761CA734F10010D421 /* Roll1State.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66751CA734F10010D421 /* Roll1State.m */; };
 		68AA66791CA7357E0010D421 /* SingleDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66781CA7357E0010D421 /* SingleDice.m */; };
 		68AA667C1CA739590010D421 /* RollState.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA667B1CA739590010D421 /* RollState.m */; };
-		68AA66841CA743600010D421 /* CanStopTurnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66831CA743600010D421 /* CanStopTurnTests.m */; };
-		68AA66A21CA792140010D421 /* TurnStateChangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A11CA792140010D421 /* TurnStateChangeTests.m */; };
-		68AA66A41CA81A950010D421 /* PointsForHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */; };
-		68AA66A61CA831BC0010D421 /* PointsForOngoingTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */; };
 		68AA66A91CA855760010D421 /* NSCountedSet+Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */; };
 		68D2577F1CB1EE7300D035FE /* NSCountedSet+Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */; };
+		68D257881CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257801CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m */; };
+		68D257891CB1F10B00D035FE /* CanRollAgainInTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257811CB1F10B00D035FE /* CanRollAgainInTurnTest.m */; };
+		68D2578A1CB1F10B00D035FE /* CanStopTurnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257821CB1F10B00D035FE /* CanStopTurnTests.m */; };
+		68D2578B1CB1F10B00D035FE /* MoveFromRolledDiceToHeldDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257831CB1F10B00D035FE /* MoveFromRolledDiceToHeldDice.m */; };
+		68D2578C1CB1F10B00D035FE /* NSCountedSetCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257841CB1F10B00D035FE /* NSCountedSetCategoryTests.m */; };
+		68D2578D1CB1F10B00D035FE /* PointsForHeldDiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257851CB1F10B00D035FE /* PointsForHeldDiceTest.m */; };
+		68D2578E1CB1F10B00D035FE /* PointsForOngoingTurnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257861CB1F10B00D035FE /* PointsForOngoingTurnTest.m */; };
+		68D2578F1CB1F10B00D035FE /* TurnStateChangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D257871CB1F10B00D035FE /* TurnStateChangeTests.m */; };
 		68F583411CB0B13D000B1398 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AA66561CA712100010D421 /* Player.m */; };
 /* End PBXBuildFile section */
 
@@ -67,11 +66,6 @@
 		09A85FD61CA473FB00C7F3C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A85FD91CA473FB00C7F3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A85FDB1CA473FB00C7F3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanMoveFromRolledDiceToHeldDiceTest.m; sourceTree = "<group>"; };
-		68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveFromRolledDiceToHeldDice.m; sourceTree = "<group>"; };
-		68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCountedSetCategoryTests.m; sourceTree = "<group>"; };
-		68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanRollAgainInTurnTest.m; sourceTree = "<group>"; };
-		68235E5B1CB0ADE9007BD3C7 /* PlayerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTests.m; sourceTree = "<group>"; };
 		68AA66551CA712100010D421 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		68AA66561CA712100010D421 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		68AA66581CA7161A0010D421 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -93,12 +87,16 @@
 		68AA667A1CA739590010D421 /* RollState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollState.h; sourceTree = "<group>"; };
 		68AA667B1CA739590010D421 /* RollState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollState.m; sourceTree = "<group>"; };
 		68AA66811CA743600010D421 /* Zonk.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zonk.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68AA66831CA743600010D421 /* CanStopTurnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanStopTurnTests.m; sourceTree = "<group>"; };
-		68AA66A11CA792140010D421 /* TurnStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnStateChangeTests.m; sourceTree = "<group>"; };
-		68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsForHeldDiceTest.m; sourceTree = "<group>"; };
-		68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsForOngoingTurnTest.m; sourceTree = "<group>"; };
 		68AA66A71CA855760010D421 /* NSCountedSet+Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCountedSet+Dice.h"; sourceTree = "<group>"; };
 		68AA66A81CA855760010D421 /* NSCountedSet+Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCountedSet+Dice.m"; sourceTree = "<group>"; };
+		68D257801CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanMoveFromRolledDiceToHeldDiceTest.m; path = FarkleTests/TurnTests/CanMoveFromRolledDiceToHeldDiceTest.m; sourceTree = SOURCE_ROOT; };
+		68D257811CB1F10B00D035FE /* CanRollAgainInTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanRollAgainInTurnTest.m; path = FarkleTests/TurnTests/CanRollAgainInTurnTest.m; sourceTree = SOURCE_ROOT; };
+		68D257821CB1F10B00D035FE /* CanStopTurnTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanStopTurnTests.m; path = FarkleTests/TurnTests/CanStopTurnTests.m; sourceTree = SOURCE_ROOT; };
+		68D257831CB1F10B00D035FE /* MoveFromRolledDiceToHeldDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoveFromRolledDiceToHeldDice.m; path = FarkleTests/TurnTests/MoveFromRolledDiceToHeldDice.m; sourceTree = SOURCE_ROOT; };
+		68D257841CB1F10B00D035FE /* NSCountedSetCategoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCountedSetCategoryTests.m; path = FarkleTests/TurnTests/NSCountedSetCategoryTests.m; sourceTree = SOURCE_ROOT; };
+		68D257851CB1F10B00D035FE /* PointsForHeldDiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointsForHeldDiceTest.m; path = FarkleTests/TurnTests/PointsForHeldDiceTest.m; sourceTree = SOURCE_ROOT; };
+		68D257861CB1F10B00D035FE /* PointsForOngoingTurnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointsForOngoingTurnTest.m; path = FarkleTests/TurnTests/PointsForOngoingTurnTest.m; sourceTree = SOURCE_ROOT; };
+		68D257871CB1F10B00D035FE /* TurnStateChangeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TurnStateChangeTests.m; path = FarkleTests/TurnTests/TurnStateChangeTests.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,24 +141,16 @@
 		68235E591CB0ADCA007BD3C7 /* TurnTests */ = {
 			isa = PBXGroup;
 			children = (
-				680B84231CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m */,
-				68235E571CB0984D007BD3C7 /* CanRollAgainInTurnTest.m */,
-				68AA66831CA743600010D421 /* CanStopTurnTests.m */,
-				68235E531CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m */,
-				68235E551CB08A35007BD3C7 /* NSCountedSetCategoryTests.m */,
-				68AA66A31CA81A950010D421 /* PointsForHeldDiceTest.m */,
-				68AA66A51CA831BC0010D421 /* PointsForOngoingTurnTest.m */,
-				68AA66A11CA792140010D421 /* TurnStateChangeTests.m */,
+				68D257801CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m */,
+				68D257811CB1F10B00D035FE /* CanRollAgainInTurnTest.m */,
+				68D257821CB1F10B00D035FE /* CanStopTurnTests.m */,
+				68D257831CB1F10B00D035FE /* MoveFromRolledDiceToHeldDice.m */,
+				68D257841CB1F10B00D035FE /* NSCountedSetCategoryTests.m */,
+				68D257851CB1F10B00D035FE /* PointsForHeldDiceTest.m */,
+				68D257861CB1F10B00D035FE /* PointsForOngoingTurnTest.m */,
+				68D257871CB1F10B00D035FE /* TurnStateChangeTests.m */,
 			);
 			path = TurnTests;
-			sourceTree = "<group>";
-		};
-		68235E5A1CB0ADD7007BD3C7 /* PlayerTests */ = {
-			isa = PBXGroup;
-			children = (
-				68235E5B1CB0ADE9007BD3C7 /* PlayerTests.m */,
-			);
-			path = PlayerTests;
 			sourceTree = "<group>";
 		};
 		684FEF301CA5AF4D00E27DD0 /* model */ = {
@@ -233,10 +223,8 @@
 		68AA66821CA743600010D421 /* ZonkTests */ = {
 			isa = PBXGroup;
 			children = (
-				68235E5A1CB0ADD7007BD3C7 /* PlayerTests */,
 				68235E591CB0ADCA007BD3C7 /* TurnTests */,
 			);
-			name = ZonkTests;
 			path = ZonkTests;
 			sourceTree = "<group>";
 		};
@@ -361,26 +349,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68235E541CB070A1007BD3C7 /* MoveFromRolledDiceToHeldDice.m in Sources */,
+				68D2578B1CB1F10B00D035FE /* MoveFromRolledDiceToHeldDice.m in Sources */,
 				68422E931CAB3E3400FBD05E /* Game.m in Sources */,
-				68235E5C1CB0ADE9007BD3C7 /* PlayerTests.m in Sources */,
-				68235E561CB08A35007BD3C7 /* NSCountedSetCategoryTests.m in Sources */,
+				68D2578D1CB1F10B00D035FE /* PointsForHeldDiceTest.m in Sources */,
 				68F583411CB0B13D000B1398 /* Player.m in Sources */,
-				68AA66A21CA792140010D421 /* TurnStateChangeTests.m in Sources */,
+				68D257881CB1F10B00D035FE /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */,
+				68D257891CB1F10B00D035FE /* CanRollAgainInTurnTest.m in Sources */,
 				68422E911CAB3E2D00FBD05E /* SingleDice.m in Sources */,
 				68422E8E1CAB3DE700FBD05E /* Roll4State.m in Sources */,
-				68AA66841CA743600010D421 /* CanStopTurnTests.m in Sources */,
 				68422E8D1CAB3DE400FBD05E /* Roll3State.m in Sources */,
+				68D2578C1CB1F10B00D035FE /* NSCountedSetCategoryTests.m in Sources */,
 				68AA66A91CA855760010D421 /* NSCountedSet+Dice.m in Sources */,
 				68422E8C1CAB3DD800FBD05E /* Roll2State.m in Sources */,
 				68422E8F1CAB3DEA00FBD05E /* Roll5State.m in Sources */,
 				68422E921CAB3E3000FBD05E /* Turn.m in Sources */,
 				68422E8B1CAB3DD400FBD05E /* Roll1State.m in Sources */,
+				68D2578F1CB1F10B00D035FE /* TurnStateChangeTests.m in Sources */,
 				68422E901CAB3DEE00FBD05E /* RollState.m in Sources */,
-				68AA66A41CA81A950010D421 /* PointsForHeldDiceTest.m in Sources */,
-				68AA66A61CA831BC0010D421 /* PointsForOngoingTurnTest.m in Sources */,
-				68235E581CB0984D007BD3C7 /* CanRollAgainInTurnTest.m in Sources */,
-				680B84241CA9675C000202BD /* CanMoveFromRolledDiceToHeldDiceTest.m in Sources */,
+				68D2578E1CB1F10B00D035FE /* PointsForOngoingTurnTest.m in Sources */,
+				68D2578A1CB1F10B00D035FE /* CanStopTurnTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
