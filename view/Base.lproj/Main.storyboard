@@ -25,8 +25,7 @@
                                     <rect key="frame" x="144" y="444" width="113" height="64"/>
                                 </variation>
                                 <connections>
-                                    <action selector="onRollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0lY-Mi-sRB"/>
-                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZG-nh-N1W"/>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oGW-4x-oMi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAI-kP-qQz">
@@ -37,7 +36,7 @@
                                     <rect key="frame" x="144" y="516" width="113" height="64"/>
                                 </variation>
                                 <connections>
-                                    <action selector="stopTurnButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30N-CN-YVs"/>
+                                    <action selector="stopTurnButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3D-Vg-JcE"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xhb-nB-7RP">
