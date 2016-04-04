@@ -19,4 +19,10 @@
             self.turnContext.heldDice.diceCount == 4);
 }
 
+-(BOOL) canRollDice {
+    // either no rolled dice OR there are points in the held dice
+    return self.turnContext.rolledDice.diceCount == 0 ||
+           self.turnContext.heldDice.points > 0;
+}
+
 @end
