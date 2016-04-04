@@ -36,7 +36,6 @@ typedef NS_ENUM(NSUInteger, DiceSection) {
 #pragma mark - UICollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section {
-    NSLog(@"in %@", NSStringFromSelector(_cmd));
     switch (section) {
         case DiceSectionBanked:
             return self.game.player.turn.bankedDice.diceCount;
@@ -117,21 +116,21 @@ canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout*)collectionViewLayout
 referenceSizeForHeaderInSection:(NSInteger)section {
-    return CGSizeMake(0., 30.);
+    return CGSizeMake(0., 50.);
 }
 
 
 #pragma mark - IBActions
 - (IBAction)rollButtonPressed:(UIButton *)sender {
     if ([self.game.player.turn canRollDice]) {
-        [self.game roll];
+        [self.game.player.turn rollDice];
         [self.collectionView reloadData];
     }
 }
 
 - (IBAction)stopTurnButtonPressed:(UIButton *)sender {
     if ([self.game.player.turn canStopTurn]) {
-        [self.game stopTurn];
+        [self.game.player.turn rollDice];
         [self.collectionView reloadData];
     }
 }
